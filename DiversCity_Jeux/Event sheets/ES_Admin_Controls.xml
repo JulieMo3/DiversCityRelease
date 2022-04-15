@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Admin_Controls</name>
+    <events>
+        <variable constant="0" name="Nb_Badges_Admin" sid="675575651903916" static="0" type="number">0</variable>
+        <event-block sid="356585446498098">
+            <conditions>
+                <condition id="2" name="Key is down" sid="588851074239365" type="Keyboard">
+                    <param id="0" name="Key">17</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="245808492301736">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="607614478593208" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="708764920399108" type="System">
+                            <param id="0" name="Layout">Centre</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="291962310861574">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="610051826402880" type="Keyboard">
+                            <param id="0" name="Key">77</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="731094928810477" type="HUD_Zone" />
+                        <action id="-9" name="Destroy" sid="263538242298783" type="HUD_Zone_Text" />
+                        <action id="-9" name="Destroy" sid="414558707767804" type="sac_icon" />
+                        <action id="-9" name="Destroy" sid="687684853765109" type="badge_isolement" />
+                        <action id="-9" name="Destroy" sid="391192568697154" type="badge_laicite" />
+                        <action id="-9" name="Destroy" sid="297951584139143" type="badge_racisme" />
+                        <action id="-9" name="Destroy" sid="115709640399647" type="badge_radicalisation" />
+                        <action id="-9" name="Destroy" sid="961164975315174" type="badge_solidarite" />
+                        <action id="-9" name="Destroy" sid="251066807271680" type="badge_tolerance" />
+                        <action id="-9" name="Destroy" sid="604093317455941" type="Player" />
+                        <action id="-2" name="Go to layout" sid="240710268104904" type="System">
+                            <param id="0" name="Layout">Chapitre3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="719334715017060">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="668402445459755" type="Keyboard">
+                            <param id="0" name="Key">66</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="181117230157918" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="160408741655284" type="System">
+                            <param id="0" name="Variable">Nb_Badges_Admin</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="658816684829992">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="157309359526195" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="585298616125853" type="badge_isolement">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="456623940296897">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="559817235151329" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="323130470545029" type="badge_laicite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="387987513906024">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="691298295456903" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="719806107363063" type="badge_racisme">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594704143932987">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="312119580213519" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="196437716607412" type="badge_radicalisation">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="814692717536953">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="247449272725870" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="153018878493926" type="badge_solidarite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="241543585013102">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="954830084909173" type="System">
+                                    <param id="0" name="Variable">Nb_Badges_Admin</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="899150715162913" type="badge_tolerance">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="998693559911837" type="System">
+                                    <param id="0" name="Variable">HasEarnedBadge</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="182527244953685">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="292050557621048" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="988671336316748" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

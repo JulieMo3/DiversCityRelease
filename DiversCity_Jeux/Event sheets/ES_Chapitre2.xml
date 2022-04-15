@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Chapitre2</name>
+    <events>
+        <include>ES_Pnj</include>
+        <include>ES_Gestion_Temps</include>
+        <include>ES_Sac_Joueur</include>
+        <include>ES_Admin_Controls</include>
+        <include>ES_XML</include>
+        <variable constant="0" name="PreviousDistrict" sid="360653626613772" static="0" type="text"></variable>
+        <variable constant="0" name="PreviousMoveToLayoutUID" sid="249813323081461" static="0" type="number">0</variable>
+        <variable constant="0" name="PreviousPlayerY" sid="582225155799309" static="0" type="number">-1</variable>
+        <variable constant="0" name="PreviousPlayerX" sid="361880874162120" static="0" type="number">-1</variable>
+        <variable constant="0" name="character_name" sid="271722278765552" static="0" type="text">alex</variable>
+        <comment>pour n&apos;effectuer la transition qu&apos;une seul fois</comment>
+        <variable constant="0" name="transition_c2_once" sid="196491751491649" static="0" type="number">0</variable>
+        <event-block sid="713294618092923">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="880810881617682" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="968849723653865" type="Function">
+                    <param id="0" name="Name">&quot;Invisible&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="887125453726745" type="System">
+                    <param id="0" name="X">544</param>
+                </action>
+                <action id="-33" name="Set layer parallax" sid="602699842382361" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Parallax X">0</param>
+                    <param id="2" name="Parallax Y">0</param>
+                </action>
+                <action id="-33" name="Set layer parallax" sid="832229905006726" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                    <param id="1" name="Parallax X">0</param>
+                    <param id="2" name="Parallax Y">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="530573353132991" type="Player">
+                    <param id="0" name="Layer">&quot;Characters&quot;</param>
+                </action>
+                <action id="-24" name="Move to top" sid="369854991106277" type="Player" />
+                <action id="-26" name="Move to layer" sid="679196745649521" type="DialogBox">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="210453186679505" type="Dialog_interieur">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="422040601100318" type="Choice">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="457979427167043" type="Dialog_choice">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="229541935269466" type="HUD_Zone">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="896043695458953" type="HUD_Zone_Text">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="678417328926073" type="Strip">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="629299502079366" type="badge_isolement">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="775700630014479" type="badge_racisme">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="594814761725380" type="badge_laicite">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="544294902085989" type="badge_radicalisation">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="573273089529069" type="badge_solidarite">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="429584734489209" type="badge_tolerance">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="150714245989358" type="Sac_categorie">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="527670097967680" type="Sac_categorie_text">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="242572077116585" type="sac_icon">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="238266959609620" type="HUD_Zone">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="165725630387430" type="HUD_Zone_Text">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="316832883498615" type="Strip" />
+                <action id="-24" name="Move to top" sid="387706883773161" type="Sac_categorie_text" />
+                <action id="-24" name="Move to top" sid="431408797372258" type="sac_icon" />
+                <action id="-4" name="Set layer visible" sid="834840986932380" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="464394217809319">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="115002675676114" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="118680890748626" type="System">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512115921573131">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="476652866599266" type="System">
+                            <param id="0" name="First value">Dialog_dictionary.Get(&quot;pas_solidaire&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="788649098902057" type="System">
+                            <param id="0" name="First value">Dialog_dictionary.Get(&quot;sdf&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="301366386058640" type="System">
+                            <param id="0" name="Variable">HasBottle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="166326659315083" type="Bottle">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="417736556581851" type="Bottle">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="734283131122849" title="CHOIX_PERSONNAGE">
+            <sub-events>
+                <event-block sid="675547714963118">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="113973574570746" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Character_select_button</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="865706105201541" type="Character_select_button" />
+                        <condition id="-14" name="Compare variable" sid="145946733862638" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="971179590745698" type="System">
+                            <param id="0" name="Variable">character_name</param>
+                            <param id="1" name="Value">Character_select_button.Character_name</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="827100344975579" type="Player">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="218385535632506" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="302581810342416" type="Player">
+                            <param id="0" name="Animation">character_name&amp;&quot;_idle_up&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="502075510950905" title="TRANSITION">
+            <sub-events>
+                <event-block sid="630667318635739">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="510852678590837" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452915742330104">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="350146088985433" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2.7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="151527736760219" type="secretaire_c2">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="986310940850470" type="secretaire_c2">
+                                    <param id="0" name="Animation">&quot;walk_right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="635169961755313" type="secretaire_c2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Le personnage non visible dit quelque chose PS =&gt; c&apos;est pas forcement appoline c&apos;est juste que c&apos;est la bulle la mieux placé ^^</comment>
+                        <event-block sid="412802380987658">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="510068986716588" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">2.7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="0" name="Stop" sid="238737267830971" type="secretaire_c2" />
+                                <action id="4" name="Set animation" sid="968356940387061" type="secretaire_c2">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="127656542691928" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="538676788836720" type="Dialog_interieur">
+                                    <param id="0" name="Text">&quot;ATTENDEZ!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>La secretaire demande ce qu&apos;il veut</comment>
+                        <event-block sid="108129788190199">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="988977535850247" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="870529385201677" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="164872705417331" type="Dialog_interieur">
+                                    <param id="0" name="Text">&quot;Secretaire : Qu&apos;est-ce que vous voulez ?&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Le text de chacun des personnage PS à la fin tu rajoute un truc du genre appuie sur 1 pour alex 2 pour appoline etc...</comment>
+                        <event-block sid="261376015025929">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="565203929902305" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="140185897804917" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="436535407582524" type="Character_select_button">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="129584911684939" type="Text_transition_c2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="824260406444822" type="System">
+                                    <param id="0" name="Variable">transition_c2_once</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="666725507374857">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="650799483481180" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="674544127676753" type="Character_select_button">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="115146816199401" type="Text_transition_c2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="285414414607537">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="504411252165357" type="Stop_player_transition">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="824201067781596" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="924338821391094" type="Player">
+                                    <param id="0" name="Animation">character_name&amp;&quot;_walk_up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="786986115359921">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="375566613615877" type="Stop_player_transition">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="0" name="Stop" sid="204081228416445" type="Player" />
+                                <action id="4" name="Set animation" sid="969324606554294" type="Player">
+                                    <param id="0" name="Animation">character_name&amp;&quot;_idle_up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="992106259264344" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="877916346371245" type="Dialog_interieur">
+                                    <param id="0" name="Text">&quot;Secretaire : Vous devrez attendre, la mairie vient de fermer.&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="779048934075218" type="System">
+                                    <param id="0" name="Variable">transition_c2_once</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="790132738731840" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>La reponse du joueur après le click sur la secretaire</comment>
+                <event-block sid="827876828086209">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="325135807781435" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="879921525124984">
+                            <conditions>
+                                <condition id="0" name="On click" sid="683480282446694" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="520945301794430" type="Dialog_interieur">
+                                    <param id="0" name="Text">uppercase(mid(character_name, 0,1))&amp;mid(character_name, 1, 10) &amp; &quot; : Bon, et bien je repasserai, tant pis.&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="288701663439612" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="320550665300441" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="401397651347992" type="secretaire_c2" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="313258460149518" type="FadeInBlack" />
+                                <action id="0" name="Call function" sid="422239822590403" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="197999024417945" type="System">
+                                    <param id="0" name="Variable">transition_c2_once</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="616582175464215" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="425106877781860" type="System">
+                                    <param id="0" name="Layout">ST_2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="576903680720558">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="490013466592323" type="Player">
+                    <param id="0" name="Object">MoveToLayout</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="232405329738647">
+                    <conditions>
+                        <condition id="-11" name="Is within angle" sid="563971983126314" type="MoveToLayout">
+                            <param id="0" name="Within">0.5</param>
+                            <param id="1" name="Angle">Player.8Direction.MovingAngle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="973219287318682" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="484076187531028" type="Player">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="926535895993673" type="System">
+                            <param id="0" name="Variable">PreviousMoveToLayoutUID</param>
+                            <param id="1" name="Value">MoveToLayout.UID</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="432033958754784" type="System">
+                            <param id="0" name="Variable">PreviousDistrict</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491222005297769" type="System">
+                            <param id="0" name="Variable">PreviousPlayerX</param>
+                            <param id="1" name="Value">MoveToLayout.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="570146762739789" type="System">
+                            <param id="0" name="Variable">PreviousPlayerY</param>
+                            <param id="1" name="Value">MoveToLayout.Y + (MoveToLayout.Height/2)</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="824390196244448" type="FadeInBlack" />
+                        <action id="-16" name="Wait" sid="210104281922877" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="933842382569111" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="395303022009259" type="Player">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Droite</comment>
+                        <event-block sid="337005854572056">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="645228445985997" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="452866691709916" type="Player">
+                                    <param id="0" name="X">Player.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Bas</comment>
+                        <event-block sid="237668941143926">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="308116482188992" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="365367422128842" type="Player">
+                                    <param id="0" name="Y">Player.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Gauche</comment>
+                        <event-block sid="481224033814311">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="551929606694449" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="563468537082022" type="Player">
+                                    <param id="0" name="X">LayoutWidth-Player.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Haut</comment>
+                        <event-block sid="813671725232086">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="319728525104712" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">270</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="928778355410880" type="Player">
+                                    <param id="0" name="Y">LayoutHeight-Player.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="854899234071781">
+                            <conditions />
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="503588733722728" type="System">
+                                    <param id="0" name="Layout">MoveToLayout.LayoutName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="923777848731285">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="139537353232796" type="Player">
+                    <param id="0" name="Object">Bottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="835270154335680" type="System">
+                    <param id="0" name="Variable">HasBottle</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="907723600999930" type="Dialog_interieur">
+                    <param id="0" name="Text">&quot;Vous avez obtenu une bouteille!&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="643736839139864" type="Function">
+                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="270512649333701" type="System">
+                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="369350449656005" type="Function">
+                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Destroy" sid="265524878894064" type="Bottle" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

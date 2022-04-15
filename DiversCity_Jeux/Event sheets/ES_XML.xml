@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_XML</name>
+    <events>
+        <event-block sid="432811522341769">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="210088985998559" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="145771224852449" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dialogue_chapitre_2&quot;</param>
+                    <param id="1" name="File">Chap2_Dialogues.xml</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564213965408142">
+            <conditions>
+                <condition id="0" name="On completed" sid="834306238437593" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dialogue_chapitre_2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="882922843661544" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939993374278323">
+            <conditions>
+                <condition id="1" name="On error" sid="711746884536101" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dialogue_chapitre_2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="717481536229415" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">AJAX.Progress</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

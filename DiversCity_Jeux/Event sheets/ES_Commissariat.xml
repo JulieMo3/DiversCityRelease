@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Commissariat</name>
+    <events>
+        <include>ES_Interieur</include>
+        <variable constant="0" name="SelectedCategorie" sid="222561372762581" static="0" type="text"></variable>
+        <variable constant="0" name="CurrentTableauLayout" sid="576024799895002" static="0" type="text">Base</variable>
+        <event-group description="" sid="850732699139059" title="Tableau Quete">
+            <sub-events>
+                <event-block sid="379826516222073">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="173026307920467" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="553351705085256" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="722989508838680" type="System">
+                            <param id="0" name="Layer">&quot;PreciseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="968157018468568" type="System">
+                            <param id="0" name="Layer">&quot;TableauQueteBG&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="115375996621733">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="672151305629138" type="System">
+                                    <param id="0" name="Variable">HasEarnedBadge</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="439411402508099">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="186256913957943" type="badge_isolement">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="245271481983149" type="badge_laicite">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="404753286160993" type="badge_racisme">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="559986747831149" type="badge_radicalisation">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="922689507019597" type="badge_solidarite">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="670581038498912" type="badge_tolerance">
+                                            <param id="0" name="Instance variable">Earned</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="735237817389651" type="System">
+                                            <param id="0" name="Variable">HasEarnedBadge</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="853056287667185" type="Player">
+                                            <param id="0" name="Animation">character_name&amp;&quot;_idle_up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="216356764534163" type="Player">
+                                            <param id="0" name="X">409</param>
+                                            <param id="1" name="Y">596</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="773539883694691" type="Function">
+                                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="859854903631595" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/all_badge_dialog/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="699055883433334" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="936488664510148" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="8Direction" id="8" name="Set enabled" sid="459807853004754" type="Player">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="741395884146504" type="FadeInBlack" />
+                                        <action id="-16" name="Wait" sid="429622589039101" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="888877220134182" type="System">
+                                            <param id="0" name="Layout">ST_3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="775569406122251">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="665010400479109" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="579615649164361" type="System">
+                                            <param id="0" name="Variable">HasEarnedBadge</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="515440199493857" type="Player">
+                                            <param id="0" name="X">409</param>
+                                            <param id="1" name="Y">596</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="128141101631840" type="Player">
+                                            <param id="0" name="Animation">character_name&amp;&quot;_idle_up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="669121461111913" type="Function">
+                                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="307133192394343" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/end_dialog/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="354392944061637" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="446685197190567" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="188612172718237">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="624588595991409" type="Categorie_text" />
+                        <condition id="-15" name="Pick nearest/furthest" sid="734212820252420" type="Categorie_quete">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Categorie_text.x</param>
+                            <param id="2" name="Y">Categorie_text.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="294683108605787" type="Categorie_text">
+                            <param id="0" name="Pin to">Categorie_quete</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="544626431643461">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="352984126960989" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="615849223749136" type="Player">
+                            <param id="0" name="Object">Tableau_quete_trigger</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="176575811125079" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="122646293124808" type="Function">
+                            <param id="0" name="Name">&quot;Display_Tableau&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="129134092835474">
+                    <conditions>
+                        <condition id="0" name="On function" sid="799989463804373" type="Function">
+                            <param id="0" name="Name">&quot;Display_Tableau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="199377410587355" type="System">
+                            <param id="0" name="Variable">CurrentTableauLayout</param>
+                            <param id="1" name="Value">&quot;Base&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="755425223911666" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="568009037559466" type="System">
+                            <param id="0" name="Layer">&quot;TableauQueteBG&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="506738370905618" type="System">
+                            <param id="0" name="Layer">&quot;PreciseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="185717329938685">
+                    <conditions>
+                        <condition id="0" name="On function" sid="527845653216503" type="Function">
+                            <param id="0" name="Name">&quot;Hide_tableau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="429076385360493" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="732260888793546" type="System">
+                            <param id="0" name="Layer">&quot;TableauQueteBG&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="379476185205015" type="System">
+                            <param id="0" name="Layer">&quot;PreciseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665251759763354">
+                    <conditions>
+                        <condition id="0" name="On function" sid="545230502900902" type="Function">
+                            <param id="0" name="Name">&quot;Hide_precise_tableau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="734257050857774" type="System">
+                            <param id="0" name="Layer">&quot;PreciseQueteLayout&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="453432025424222" type="System">
+                            <param id="0" name="Variable">CurrentTableauLayout</param>
+                            <param id="1" name="Value">&quot;Base&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="256707338337991" type="Categorie_quete">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">Categorie_quete.initialX</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="682232287426540" type="Categorie_quete">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">Categorie_quete.initialY</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="267463360938779" type="System">
+                            <param id="0" name="Tag">&quot;MoveDone&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="983657784959442" type="Categorie_quete">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="542808014556015" type="QuestHint">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="199026344515482" type="Categorie_text">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="407352131314489" type="Entete">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="850144134105694">
+                    <conditions>
+                        <condition id="0" name="On function" sid="541389957581201" type="Function">
+                            <param id="0" name="Name">&quot;Display_precise_tableau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="229789289695587" type="System">
+                            <param id="0" name="Variable">CurrentTableauLayout</param>
+                            <param id="1" name="Value">&quot;Precise&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="319786821695758" type="QuestHint">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="747959827199043" type="Categorie_text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="498598530532591" type="Categorie_quete">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="695849609985392" type="Entete">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="371553203770496">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="452393077624212" type="System">
+                                    <param id="0" name="Object">Categorie_quete</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="879334917576144" type="Categorie_quete">
+                                    <param id="0" name="Instance variable">categorie_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">SelectedCategorie</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="689745310820605" type="Categorie_text">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Categorie_quete.X</param>
+                                    <param id="2" name="Y">Categorie_quete.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="570836926929346" type="Categorie_quete">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="863465660315431" type="Categorie_text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="381918490635442" type="Categorie_quete">
+                                    <param id="0" name="Instance variable">targetX</param>
+                                    <param id="1" name="Value">Entete.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="272620167020772" type="Categorie_quete">
+                                    <param id="0" name="Instance variable">targetY</param>
+                                    <param id="1" name="Value">Entete.Y</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="218659676983695" type="System">
+                                    <param id="0" name="Tag">&quot;MoveDone&quot;</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="748399575394737" type="System">
+                                    <param id="0" name="Layer">&quot;PreciseQueteLayout&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="253334551106230">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="666000353190227" type="System">
+                                            <param id="0" name="Variable">SelectedCategorie</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;amitie&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="441347714581259" type="Specific_quete_hint">
+                                            <param id="0" name="Text">&quot;On nous a signalé un problème avec un sans abri dans le quartier solidaire.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="442148943609813" type="Specific_quete_hint2">
+                                            <param id="0" name="Text">&quot;On nous a indiqué un problème de famille dans le quartier solidaire.&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="883876761712117">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="824220521081404" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">176</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="704833320593785" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;solidarite&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="526758116251522">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="649076162713101" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">177</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="482466800401696" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;isolement&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="997628503638459">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="705614032518152" type="System">
+                                            <param id="0" name="Variable">SelectedCategorie</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;voisinage&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="977132391411493" type="Specific_quete_hint">
+                                            <param id="0" name="Text">&quot;On a une affaire eux alentours de l&apos;hopital dans le quartier solidaire.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="873755149515263" type="Specific_quete_hint2">
+                                            <param id="0" name="Text">&quot;On a eu des plaintes concernant le propriétaire du restaurant dans le quartier culturel.&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="635971796932779">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="266789091948585" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">176</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="808942763847734" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;tolerance&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="725157182804454">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="404901274787110" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">177</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="135926511652939" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;racisme&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="229461727811603">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="337734040369476" type="System">
+                                            <param id="0" name="Variable">SelectedCategorie</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;religion&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="295308562360351" type="Specific_quete_hint">
+                                            <param id="0" name="Text">&quot;On nous a rapporté quelques soucis avec une personne iterationiste au cinéma dans le quartier culturel&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="702424105527664" type="Specific_quete_hint2">
+                                            <param id="0" name="Text">&quot;On nous a rapporté quelques difficultés avec une personne de la grande éclipse dans le quartier energétique&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="446247213613590">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="903136765467009" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">176</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="383154413866949" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;laicite&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="993228015814095">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="332569495546286" type="BadgeDisplay">
+                                                    <param id="0" name="Unique ID">177</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="800660063999825" type="BadgeDisplay">
+                                                    <param id="0" name="Animation">&quot;radicalisation&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="444309774074468">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="822877274788825" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Categorie_quete</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="265526680124322" type="Categorie_quete" />
+                        <condition id="-14" name="Compare variable" sid="767380841609186" type="System">
+                            <param id="0" name="Variable">CurrentTableauLayout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Base&quot;</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="268593382489541" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="100531158398569" type="System">
+                            <param id="0" name="Variable">SelectedCategorie</param>
+                            <param id="1" name="Value">Categorie_quete.categorie_name</param>
+                        </action>
+                        <action id="0" name="Call function" sid="155845499484088" type="Function">
+                            <param id="0" name="Name">&quot;Display_precise_tableau&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771586893470700">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="491456041904393" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Back_button</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="295335586223522" type="System">
+                            <param id="0" name="Layer">&quot;BaseQueteLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="552119981136302">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="930580520972208" type="System">
+                                    <param id="0" name="Variable">CurrentTableauLayout</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Precise&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="380914721118055" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_precise_tableau&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="207567101669924">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="948874981195174" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="528407622597622" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_tableau&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="705463128514720">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="988772118051613" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="860389261286399" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="463134897451386" type="Map">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="428780764730709" type="Back_button">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="895844801640018">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="262418765240118" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Back_button</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="267091519726281" type="Map" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="366816623053945" type="Map">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="189103162116672" type="Back_button">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

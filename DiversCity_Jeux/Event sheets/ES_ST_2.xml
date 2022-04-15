@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_ST_2</name>
+    <events>
+        <variable constant="0" name="Passer_Transi" sid="327834110467024" static="0" type="number">0</variable>
+        <event-block sid="514304083573401">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="348116669294548" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="988446932566126" type="Audio">
+                    <param id="0" name="Tag">&quot;Music1&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="228151592438164" type="Audio">
+                    <param id="0" name="Folder">1</param>
+                    <param id="1" name="Audio file name">&quot;Ville&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">15</param>
+                    <param id="2" name="Tag (optional)">&quot;Music2&quot;</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="806306871453624" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="646696132534475" type="sac_icon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="857298647667730" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="527695738551184" type="Formule">
+                    <param id="0" name="Text">&quot;Bonjour &quot;&amp;uppercase(mid(character_name, 0,1))&amp;mid(character_name, 1, 10) &amp;&quot;,&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="949012146411617" type="Corps">
+                    <param id="0" name="Text">&quot;Ma secrétaire m&apos;a parlé d&apos;une demande que tu souhaiterais me communiquer. Bien qu&apos;étant intéressé par ce que tu as à me dire, je n&apos;ai pas un emploi du temps très flexible et j&apos;aimerais que notre entrevue soit aussi pertinente que possible. C&apos;est pourquoi, j&apos;ai également une demande à formuler : j&apos;aimerais qu&apos;avant de prendre rendez-vous ensemble, tu ailles parler aux habitants de la ville, afin de te faire une idée des problèmes dont nous devrions parler. Tu pourras ainsi formuler des demandes cohérentes avec les besoins de la communauté. Tu seras un peu leur porte-parole, en quelque sorte. J&apos;espère que cette petite condition ne te posera pas de problèmes et j&apos;espère donc te voir bientôt afin d&apos;avoir une conversation des plus enrichissantes.&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="671392470572932" type="Signature">
+                    <param id="0" name="Text">&quot;Le Gouverneur de DiversCity&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="677825675910507" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="354139974898497" type="Lettre_Intro" />
+                <action behavior="Fade" id="1" name="Start fade" sid="249089315212428" type="Formule" />
+                <action behavior="Fade" id="1" name="Start fade" sid="798993428093193" type="Corps" />
+                <action behavior="Fade" id="1" name="Start fade" sid="242790089421722" type="Signature" />
+                <action id="-16" name="Wait" sid="750312217864277" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="423953778022843" type="System">
+                    <param id="0" name="Variable">Passer_Transi</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="702342251139554">
+            <conditions>
+                <condition id="0" name="On click" sid="110476676668906" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="661995746754800" type="Lettre_Intro" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="928050945242688">
+            <conditions>
+                <condition id="0" name="On click" sid="572098041904471" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="365269135356394" type="System">
+                    <param id="0" name="Variable">Passer_Transi</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="754599479894724" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="202174949795097" type="sac_icon">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="234035139812967" type="HUD_Zone">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="930415209819244" type="HUD_Zone_Text">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="331386516977641" type="System">
+                    <param id="0" name="Layout">Centre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

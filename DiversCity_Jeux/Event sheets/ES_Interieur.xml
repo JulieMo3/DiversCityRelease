@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Interieur</name>
+    <events>
+        <variable constant="0" name="personnage" sid="570056759678247" static="0" type="text"></variable>
+        <include>ES_Pnj</include>
+        <include>ES_Sac_Joueur</include>
+        <include>ES_Admin_Controls</include>
+        <include>ES_XML</include>
+        <event-group description="" sid="673261142894097" title="Gestion_interieur">
+            <sub-events>
+                <event-block sid="379261151654635">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="512549465482602" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="113858686418892" type="Function">
+                            <param id="0" name="Name">&quot;Invisible&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="394317619348239" type="Player">
+                            <param id="0" name="Layer">&quot;Character&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="377928664933477" type="Player">
+                            <param id="0" name="X">GoBackToDistrict.X</param>
+                            <param id="1" name="Y">GoBackToDistrict.Y - Player.Height</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="764432020211260" type="System">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                            <param id="1" name="Parallax X">0</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="827650825680668" type="System">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parallax X">0</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="871178723512683" type="Player">
+                            <param id="0" name="Layer">&quot;Characters&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="132904324191336" type="DialogBox">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="689800154879124" type="Dialog_interieur">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="721641197832102" type="Choice">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="966938118330313" type="Dialog_choice">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="701197962561952" type="DialogBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="418823364889771" type="Choice">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="405211081513303" type="Dialog_choice">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="376072812445836" type="HUD_Zone">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="546770986938551" type="HUD_Zone_Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="377898165960387" type="HUD_Zone">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="388893866435457" type="HUD_Zone_Text">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="288859969650480" type="Strip">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="206355974939904" type="badge_isolement">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="513963584478974" type="badge_racisme">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="408914276694175" type="badge_laicite">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="375967778353903" type="badge_radicalisation">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="623966459372746" type="badge_solidarite">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="739541951468283" type="badge_tolerance">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="955142730660159" type="Sac_categorie">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="991776831865442" type="Sac_categorie_text">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="112688813091232" type="sac_icon">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="809823840682324" type="Strip" />
+                        <action id="-24" name="Move to top" sid="441261645672829" type="Sac_categorie_text" />
+                        <action id="-24" name="Move to top" sid="411383318815326" type="sac_icon" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="489318270627309">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="901675062619117" type="System">
+                                    <param id="0" name="Object">Pnj</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="295025788510609">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="915817074542024" type="System">
+                                            <param id="0" name="First value">mid(Pnj.personnage, 0,9)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;ami_kevin&quot;</param>
+                                        </condition>
+                                        <condition id="-15" name="Pick nearest/furthest" sid="215295192521842" type="PNJ_dialog_trigger">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">Pnj.X</param>
+                                            <param id="2" name="Y">Pnj.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="651012542930950" type="PNJ_dialog_trigger" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="872909356065063">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="360931719108739" type="System">
+                                                    <param id="0" name="Variable">IsFollowedByFriends</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="251566463114975" type="Pnj" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="163533815519895">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="489617748910749" type="Player">
+                    <param id="0" name="Object">GoBackToDistrict</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="444322518356701" type="FadeInBlack" />
+                <action behavior="8Direction" id="8" name="Set enabled" sid="991128311214179" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="584564968553763" type="Player">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="949883757964792" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="803159120365259" type="Player">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="876439808567870" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="882470570251107" type="Player">
+                    <param id="0" name="X">PreviousPlayerX</param>
+                    <param id="1" name="Y">PreviousPlayerY+Player.Height</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="798600296318038" type="System">
+                    <param id="0" name="Layout">PreviousDistrict</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

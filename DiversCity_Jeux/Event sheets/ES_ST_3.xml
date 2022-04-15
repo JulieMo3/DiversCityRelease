@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_ST_3</name>
+    <events>
+        <event-block sid="540603009798066">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="322857285657053" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="781756632511553" type="Audio">
+                    <param id="0" name="Tag">&quot;Music2&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="531656611134045" type="Audio">
+                    <param id="0" name="Folder">1</param>
+                    <param id="1" name="Audio file name">&quot;Tour&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">15</param>
+                    <param id="2" name="Tag (optional)">&quot;Music3&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="760938519222723" type="DialogBox" />
+                <action id="-9" name="Destroy" sid="180827211716956" type="Dialog_interieur" />
+                <action id="-9" name="Destroy" sid="912996899709584" type="Choice" />
+                <action id="-9" name="Destroy" sid="395931793502881" type="Dialog_choice" />
+                <action id="-9" name="Destroy" sid="738301643142933" type="Player" />
+                <action id="-9" name="Destroy" sid="539968747066241" type="sac_icon" />
+                <action id="-9" name="Destroy" sid="398315613695269" type="HUD_Zone" />
+                <action id="-9" name="Destroy" sid="449120145506653" type="HUD_Zone_Text" />
+                <action id="-9" name="Destroy" sid="934364379314863" type="Sac_categorie_text" />
+                <action id="-9" name="Destroy" sid="158897408365403" type="MoveTo" />
+            </actions>
+        </event-block>
+        <event-block sid="322234750712039">
+            <conditions>
+                <condition id="0" name="On click" sid="484404423968150" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="620774624983103">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="754899164630993" type="Message_1">
+                            <param id="0" name="Text">&quot;Bonjour Alex ça fait un moment que je n’ai pas vu Appoline, est-ce que tu sais où elle est passée je m’inquiète ?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="152216836029388" type="Contact">
+                            <param id="0" name="Text">&quot;Maman Appoline&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="242597496564710" type="Message_2">
+                            <param id="0" name="Text">&quot;Je ne l’ai pas vue aujourd’hui, je pars à sa recherche, pas de panique!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="385038208219421">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="829092297113868" type="System">
+                            <param id="0" name="Variable">character_name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;alex&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="289669266861119" type="Message_1">
+                            <param id="0" name="Text">&quot;Bonjour Alex ça fait un moment que je n’ai pas vu Mai, est-ce que tu sais où elle est passée je m’inquiète ?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="692294464301778" type="Contact">
+                            <param id="0" name="Text">&quot;Maman Mai&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="737305457526905" type="Message_2">
+                            <param id="0" name="Text">&quot;Je ne l’ai pas vue aujourd’hui, je pars à sa recherche, pas de panique!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359511789190528">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="299321745207290" type="System">
+                            <param id="0" name="Variable">character_name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;appoline&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="181810908760834" type="Message_1">
+                            <param id="0" name="Text">&quot;Bonjour Appoline ça fait un moment que je n’ai pas vu Nassim, est-ce que tu sais où il est passé je m’inquiète ?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="333303651221059" type="Contact">
+                            <param id="0" name="Text">&quot;Maman Nassim&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="206985406499173" type="Message_2">
+                            <param id="0" name="Text">&quot;Je ne l’ai pas vu aujourd’hui, je pars à sa recherche, pas de panique!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812023370565284">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="973479548482683" type="System">
+                            <param id="0" name="Variable">character_name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;nassim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="453626112657597" type="Message_1">
+                            <param id="0" name="Text">&quot;Bonjour Nassim ça fait un moment que je n’ai pas vu Appoline, est-ce que tu sais où elle est passée je m’inquiète ?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="859917220567182" type="Contact">
+                            <param id="0" name="Text">&quot;Maman Appoline&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="109816566508952" type="Message_2">
+                            <param id="0" name="Text">&quot;Je ne l’ai pas vue aujourd’hui, je pars à sa recherche, pas de panique!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="328586849222303">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="524559842629817" type="System">
+                            <param id="0" name="Variable">character_name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mai&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="742039879975848" type="Message_1">
+                            <param id="0" name="Text">&quot;Bonjour Mai ça fait un moment que je n’ai pas vu Alex, est-ce que tu sais où il est passé je m’inquiète ?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="476066917810332" type="Contact">
+                            <param id="0" name="Text">&quot;Maman Alex&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="871856676847858" type="Message_2">
+                            <param id="0" name="Text">&quot;Je ne l’ai pas vu aujourd’hui, je pars à sa recherche, pas de panique!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121239998901928">
+                    <conditions />
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="245611226299136" type="TitleScreen" />
+                        <action id="-15" name="Set visible" sid="904006787747179" type="Contact">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="792977525125814" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="557114403953981" type="Bubble_Left">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="271930403022828" type="Bubble_Left" />
+                        <action id="-15" name="Set visible" sid="417539384834025" type="Message_1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="422201778039573" type="Message_1" />
+                        <action id="-16" name="Wait" sid="729258150553136" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="657114642170368" type="System">
+                            <param id="0" name="Tag">&quot;click&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="183443860757421" type="Bubble_Right">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="210052554076700" type="Bubble_Right" />
+                        <action id="-15" name="Set visible" sid="110896979023444" type="Message_2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="218022313638851" type="Message_2" />
+                        <action id="-16" name="Wait" sid="659319303167754" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="419382232467232" type="System">
+                            <param id="0" name="Tag">&quot;click&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="600183232588692" type="System">
+                            <param id="0" name="Layout">Chapitre3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="198460933604730">
+            <conditions>
+                <condition id="0" name="On click" sid="815027054104949" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="719335691237803" type="System">
+                    <param id="0" name="Tag">&quot;click&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

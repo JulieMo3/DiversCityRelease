@@ -1,0 +1,254 @@
+<?xml version='1.0' ?>
+<lang>
+	<fr>
+
+		<tuto>
+			<hint id='1'>Monsieur le Gouverneur, vous voilà ! Juste assez en avance pour me laisser le temps de vous donner les dernières informations dont vous aurez besoin.</hint>
+
+			<hint id='2'>Comme vous le savez, après chaque élection, le nouveau Gouverneur commence l'exercice de ses fonctions par une "journée des doléances".</hint>
+
+			<hint id='3'>Pour gagner un peu de temps, les citoyens passeront deux par deux pour vous présenter leurs demandes. Avec un peu de chance, nous finirons avant la nuit, ce serait une première !</hint>
+
+			<hint id='4'>Ah oui, j'oubliais ! Comme vous l'aviez demandé, nous avons modifié votre bureau pour que vous puissiez donner vos décisions sans vous fatiguer.</hint>
+
+			<hint id='5'>En utilisant le bouton bleu, vous acceptez la demande du citoyen derrière le pupitre bleu, le bouton jaune fait la même chose pour le pupitre jaune.</hint>
+
+			<hint id='6'>Le bouton vert sera utile si vous voulez approuvez les deux propositions en même temps.</hint>
+
+			<hint id='7'>Et si jamais les deux propositions ne vous plaisent pas, utilisez le bouton rouge. Plutôt simple non ?</hint>
+
+			<hint id='8'>Comme vous souhaitiez marquer le coup, chaque proposition de loi que vous approuvez prendra effet immédiatement.</hint>
+
+			<hint id='9'>Nous effectuerons des sondages en temps réel afin de vous montrer l'impact que vos nouvelles lois auront sur le peuple.</hint>
+
+			<hint id='10'>Tout est comme vous le souhaitiez ? Nous pouvons y aller ?</hint>
+			
+			<hint id='11'>Très bien, commençons !</hint>
+		</tuto>
+		
+		<main>
+
+			<question1>
+
+				<hint id='1'>Nous voudrions lancer le mouvement "#PoseUnLivre" qui inciterait les citoyens à déposer dans les lieux publics des livres qu'ils ont déjà lu pour que quelqu'un d'autre puisse les prendre et en profiter.</hint>
+
+				<hint id='2'>J'estime que certains ouvrages, qui ne sont rien d'autre que de la propagande religieuse, sont nocifs pour notre jeunesse. Il faut interdire leur publication !</hint>
+
+				<hint id='3'>Autoriser les citoyens à déposer des livres dans les lieux publics.</hint>
+
+				<hint id='4'>Interdire la publication de certains ouvrages "dangereux".</hint>
+
+				<hint id='Bleu'>Plusieurs parents sont inquiets des lectures sur lesquelles pourraient tomber leurs enfants.</hint>
+
+				<hint id='Jaune'>Nous recevons des appels de certains citoyens se demandant si cette censure est bien légitime…</hint>
+
+				<hint id='Vert'>Les gens semblent hésitant à déposer des livres dans la rue, peut-être qu'il faudrait lister les ouvrages à ne pas partager.</hint>
+
+				<hint id='Rouge'>Les membres de l'association Ville Propre vous félicitent de cette décision. Pour les citer simplement : "Imaginez tout ce papier dans la rue, quelle horreur !".</hint>
+
+				<hint id='Secretaire'>Ensuite… Nous avons… Oula ! Bon courage Monsieur le Gouverneur !</hint>
+
+			</question1>
+
+			<question2>
+
+				<hint id='1'>On a pas mal de problèmes avec les habitants du district voisin, tout serait bien plus calme si ils restaient chez eux, vous ne croyez pas ?</hint>
+
+				<hint id='2'>Tous les emplois près de chez moi ont été pris par des gens venant d'autres districts. Du coup, je suis obligé de traverser toute la ville pour aller travailler...</hint>
+
+				<hint id='3'>Empêcher les habitants d'un district d'en sortir.</hint>
+
+				<hint id='4'>Obliger les entreprises à recruter uniquement dans le district où elles sont situées.</hint>
+
+				<hint id='Bleu'>On nous signale que des émeutes ont éclaté un peu partout en ville et des groupes essayent de forcer les barages de sécurité…</hint>
+
+				<hint id='Jaune'>On attend une augmentation du nombre de chômeurs dans les prochains jours.</hint>
+
+				<hint id='Vert'>Je ne suis pas certaine qu'il faille diviser pour mieux régner…</hint>
+
+				<hint id='Rouge'>SKIP</hint>
+
+				<hint id='Secretaire'>Voyons ce que proposent les citoyens suivants.</hint>
+
+			</question2>
+
+			<question3>
+
+				<hint id='1'>De mon temps, on savait s'habiller dignement ! Qu'est-ce que c'est que cette jeunesse complètement dévergondée ? Il faut que ça cesse !</hint>
+
+				<hint id='2'>J'aimerais que mes enfants puissent venir à l'école dans les vêtements de leur choix. Ils ont besoin d'exprimer un peu leur personnalité pour pouvoir s'épanouir.</hint>
+
+				<hint id='3'>Interdire le port de vêtements "trop courts".</hint>
+
+				<hint id='4'>Pas d'uniforme obligatoire à l'école.</hint>
+
+				<hint id='Bleu'>Oups… On voit mes chevilles. Est-ce que j'ai le temps d'aller me changer, Monsieur le Gouverneur ?</hint>
+
+				<hint id='Jaune'>SKIP</hint>
+
+				<hint id='Vert'>SKIP</hint>
+
+				<hint id='Rouge'>SKIP</hint>
+
+				<hint id='Secretaire'>Je peux faire entrer les suivants ?</hint>
+
+			</question3>
+
+			<question4>
+
+				<hint id='1'>Nous constatons avec tristesse que les habitants de notre belle ville ne sont plus en harmonie avec les éléments. Rendre à la nature l'importance qu'elle mérite nous semble essentiel pour l'avenir de tous.</hint>
+
+				<hint id='2'>Les citoyens de DiversCity ont besoin de se rappeler : c'est grâce à notre seigneur Eliseo que le grand cycle de la vie perdure. Ils doivent prendre conscience du rôle que jouent le Soleil et la Lune dans leur quotidien.</hint>
+
+				<hint id='3'>Faire de l'Iterationisme la religion officielle de DiversCity.</hint>
+
+				<hint id='4'>Faire de La Grande Eclipse la religion officielle de DiversCity.</hint>
+
+				<hint id='Bleu'>Les disciples de La Grande Eclipse appellent pour signifier leur mécontentement.</hint>
+
+				<hint id='Jaune'>Les disciples de l'Iterationisme trouvent cette décision injuste.</hint>
+
+				<hint id='Vert'>D'après les sondages, 57% de la population se sentent mis à l'écart par cette décision.</hint>
+
+				<hint id='Rouge'>Heureuse de voir que vous optez pour la laïcité !</hint>
+
+				<hint id='Secretaire'>Mesdames, c'est à vous !</hint>
+
+			</question4>
+
+			<question5>
+
+				<hint id='1'>Comme c'est les vacances et que l'école est vide, on aimerait utiliser les locaux pour proposer des cours du soir, des petites formations gratuites, pour aider les personnes sans emploi.</hint>
+
+				<hint id='2'>On a remarqué qu'il y avait beaucoup de gaspillage alimentaire, il serait peut-être bien de récolter la nourriture qui aurait été jetée pour la donner à ceux qui en ont le plus besoin.</hint>
+
+				<hint id='3'>Proposer des ateliers de formation professionnelle ouverts à tous.</hint>
+
+				<hint id='4'>Faire que les restes de nourriture des commerces soient donnés aux SDF.</hint>
+
+				<hint id='Bleu'>SKIP</hint>
+
+				<hint id='Jaune'>Ce serait merveilleux que plus personne ne meurt de faim dans notre belle ville…</hint>
+
+				<hint id='Vert'>Monsieur ! Nous avons reçu un appel de Madame la Présidente ! Elle tenait à vous féliciter personnellement pour cette initiative.</hint>
+
+				<hint id='Rouge'>C'est dommage, ces réformes n'auraient rien coûté…</hint>
+
+				<hint id='Secretaire'>Vous pouvez entrer, Messieurs.</hint>
+
+			</question5>
+
+			<question6>
+
+				<hint id='1'>Les jeunes sont souvent très bruyants quand ils sortent en groupe, mais c'est la nuit que ça devient un véritable problème ! Ils feraient mieux de rester chez eux et de laisser dormir ceux qui travaillent !</hint>
+
+				<hint id='2'>On constate de plus en plus d'incidents durant la nuit, mais nous ne pouvons pas toujours aider les victimes. Ce serait bien qu'elles puissent accéder à la maison la plus proche pour se mettre à l'abri.</hint>
+
+				<hint id='3'>Instaurer un couvre-feu à partir de 20h pour les jeunes de moins de 20 ans.</hint>
+
+				<hint id='4'>Interdiction de fermer sa porte à clef la nuit.</hint>
+
+				<hint id='Bleu'>Les syndicats étudiants souhaiteraient vous rencontrer pour discuter de cette mesure.</hint>
+
+				<hint id='Jaune'>Souhaitez-vous également que je laisse la mairie ouverte ce soir ?</hint>
+
+				<hint id='Vert'>SKIP</hint>
+
+				<hint id='Rouge'>SKIP</hint>
+
+				<hint id='Secretaire'>Suivants !</hint>
+
+			</question6>
+
+			<question7>
+
+				<hint id='1'>Nos fidèles souhaiteraient pouvoir prendre une journée afin de se préparer à L'Eclipse Solaire, c'est un moment important dans la vie de tout disciple de La Grande Eclipse vous savez ?</hint>
+
+				<hint id='2'>La date de La Grande Marée approche, les citoyens de DiversCity devraient pouvoir se rendre sur la côte et contempler ce spectacle qui ne manquera pas d'éveiller la foi de ceux qui doutent encore. </hint>
+
+				<hint id='3'>Rendre férié le jour de L'Eclipse Solaire.</hint>
+
+				<hint id='4'>Rendre férié le jour de La Grande Marée.</hint>
+
+				<hint id='Bleu'>Les sondages indique que la population apprécie d'avoir un jour de congé supplémentaire.</hint>
+
+				<hint id='Jaune'>Les sondages indiquent que la population apprécie d'avoir un jour de congé supplémentaire.</hint>
+
+				<hint id='Vert'>C'est la même date, ça tombe bien !</hint>
+
+				<hint id='Rouge'>SKIP</hint>
+
+				<hint id='Secretaire'>J'aurais le temps de faire une toute petite pause ?</hint>
+
+			</question7>
+
+			<question8>
+
+				<hint id='1'>Nous aimerions donner la priorité aux gens habitant à proximité de l'hôpital car les urgences sont débordées ces derniers temps.</hint>
+
+				<hint id='2'>Il y a beaucoup de livres qui sortent du District et qui n'y reviennent jamais ! Il faut limiter l'accès de la bibliothèque aux personnes qui comprennent son importance et ses règles.</hint>
+
+				<hint id='3'>Réserver l'accès à l'hôpital aux habitants du District Solidaire.</hint>
+
+				<hint id='4'>Réserver l'accès à la bibliothèque aux habitants du District Culturel.</hint>
+
+				<hint id='Bleu'>Et recruter d'avantage de personnel médical, vous y avez pensé ?</hint>
+
+				<hint id='Jaune'>De nombreux élèves demandent où ils sont supposés aller réviser maintenant que la bibliothèque leur est fermée.</hint>
+
+				<hint id='Vert'>Nous recevons des plaintes de la part des citoyens qui pensaient que la santé et la culture faisaient partie de votre programme.</hint>
+
+				<hint id='Rouge'>Les citoyens sont rassurés de voir que vous restez fidèle à vos engagements dans les domaines de la santé et de la culture.</hint>
+
+				<hint id='Secretaire'>Encore une question de religion ? Bon…</hint>
+
+			</question8>
+
+			<question9>
+
+				<hint id='1'>Nous pensons que nos enfants devraient bénéficier d'un programme scolaire amélioré proposant des heures de religion et d'astronomie, et ainsi rassembler éducation et spiritualité.</hint>
+
+				<hint id='2'>Le programme scolaire actuel ne transmet pas les valeurs chères à l'Iterationisme. Nous souhaiterions ouvrir un établissement qui recentrerait l'éducation sur des valeurs plus proches de la nature et de notre foi.</hint>
+
+				<hint id='3'>Ouvrir une école de La Grande Eclipse.</hint>
+
+				<hint id='4'>Ouvrir une école Iterationiste.</hint>
+
+				<hint id='Bleu'>Les disciples de l'Iterationisme doutent de l'intérêt d'ouvrir une école pour ajouter seulement deux options au programme.</hint>
+
+				<hint id='Jaune'>Les fidèles de La Grande Eclipse trouvent inquiétant que les Iterationistes rejètent les valeurs humaines et citoyennes de l'école publique.</hint>
+
+				<hint id='Vert'>Les croyances de chacun ne devraient pas être un prétexte pour nous diviser.</hint>
+
+				<hint id='Rouge'>Vous avez raison, les enfants devraient grandir tous ensemble, peu importe leurs différences.</hint>
+
+				<hint id='Secretaire'>Aller, encore ceux là et nous en aurons terminé.</hint>
+
+			</question9>
+
+			<question10>
+
+				<hint id='1'>Notre association souhaite proposer des évènements aux vrais citoyens de DiversCity pour rassembler différentes générations autour de traditions qui leurs tiennent à coeur.</hint>
+
+				<hint id='2'>On sait très bien d'où viennent les problèmes, non ? Pourquoi ne pas poster des agents de sécurité en bas des immeubles, histoire d'être un peu tranquille ? Ça arrangerait tout le monde, vraiment.</hint>
+
+				<hint id='3'>Interdire les évènements culturels aux personnes qui ne sont pas nées à DiversCity.</hint>
+
+				<hint id='4'>Poster des agents de sécurité en bas des immeubles.</hint>
+
+				<hint id='Bleu'>Alors comme ça, je ne suis pas une vraie citoyenne !? Venez me dire ça en face !</hint>
+
+				<hint id='Jaune'>Des journalistes aimeraient vous interviewer dans le cadre de leur reportage sur les Brigades d'Intervention en Zones à Risques.</hint>
+
+				<hint id='Vert'>Vraiment ?!</hint>
+
+				<hint id='Rouge'>Comme je vous comprends. Ces propositions étaient tout simplement révoltantes !</hint>
+
+				<hint id='Secretaire'>J'espère que vos choix ont été bénéfiques pour les habitants de DiversCity, de toute façon nous en aurons bientôt confirmation…</hint>
+
+			</question10>
+
+		</main>
+
+	</fr>
+</lang>

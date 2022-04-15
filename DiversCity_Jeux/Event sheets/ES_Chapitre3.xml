@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Chapitre3</name>
+    <events>
+        <variable constant="0" name="Current_choice" sid="564543649363448" static="0" type="text"></variable>
+        <variable constant="0" name="Choice_result" sid="408668370623419" static="0" type="text"></variable>
+        <variable constant="0" name="IsFinalDialog" sid="332639895991600" static="0" type="number">0</variable>
+        <event-block sid="796414024400137">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="948116209893218" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="305122562741430" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dialogue_chapitre_3&quot;</param>
+                    <param id="1" name="File">Chap3_Dialogues.xml</param>
+                </action>
+                <action id="-9" name="Set value" sid="456161917487223" type="System">
+                    <param id="0" name="Variable">IsDisplayingDialog</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="731305131929496" type="FadeOutBlack" />
+                <action id="4" name="Set animation" sid="538790471920037" type="Player">
+                    <param id="0" name="Animation">character_name&amp;&quot;_idle_up&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="347070358856413">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="588298989406337" type="System">
+                            <param id="0" name="Variable">IsFinalDialog</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="823852658104434" type="Player">
+                            <param id="0" name="X">LayoutWidth/2</param>
+                            <param id="1" name="Y">LayoutHeight-Player.Height/2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="839804401376547">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="716573052352052" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;alex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="825913632809427" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;mai_back&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="429464075040786">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="196738803810293" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;appoline&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="662829271654265" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;nassim_back&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="512051445116605">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="976657741371276" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;mai&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="628624077558732" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;alex_back&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="523354040167287">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="376566934957855" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;nassim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="891749484024089" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;appoline_back&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="126855942610643" title="Player">
+            <sub-events>
+                <event-block sid="227865725033521">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="341830056013665" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="335580635851157">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="986212879418713" type="System">
+                                    <param id="0" name="First value">Player.8Direction.VectorX</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="168256210920396" type="Player">
+                                    <param id="0" name="Instance variable">last_direction</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="811601238825341">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="902883467265327" type="System">
+                                    <param id="0" name="First value">Player.8Direction.VectorX</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="617009134336739" type="Player">
+                                    <param id="0" name="Instance variable">last_direction</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="882957125252565">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="150200237345962" type="System">
+                                    <param id="0" name="First value">Player.8Direction.VectorY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="183663351535339" type="Player">
+                                    <param id="0" name="Instance variable">last_direction</param>
+                                    <param id="1" name="Value">&quot;down&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="262233804819071">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="390511774646645" type="System">
+                                    <param id="0" name="First value">Player.8Direction.VectorY</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="357648516991591" type="Player">
+                                    <param id="0" name="Instance variable">last_direction</param>
+                                    <param id="1" name="Value">&quot;up&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="405352058802658">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="842781149044763" type="Player">
+                                    <param id="0" name="Animation">character_name&amp;&quot;_walk_&quot;&amp;Player.last_direction</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="212261300805039">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="793628772832033" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="766806159465244" type="Player">
+                            <param id="0" name="Animation">character_name&amp;&quot;_idle_&quot;&amp;Player.last_direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="729011548138481">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="931662297019412" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="126297896654992" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="988723609402338" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="261267622499333">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="111043215699928" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="176155449113993" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="985880322546396" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="841799726689223">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="134596040721209" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="126726395803842" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="594712726836980" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="845246293095010">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="172884487098417" type="Keyboard">
+                            <param id="0" name="Key">81</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="623514098376696" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="928583644719190" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="417170959987143" title="PNJ">
+            <sub-events>
+                <event-block sid="593728043522107">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="181133037785726" type="Player">
+                            <param id="0" name="Object">Trigger_Script</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="944934220904190" type="System">
+                            <param id="0" name="Variable">IsFinalDialog</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="733844767133177" type="Function">
+                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="898774109207045" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/dial1/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="672618838362393" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="301575657830068" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/dial2/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="680122077807061" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="441941511658527" type="System">
+                            <param id="0" name="Variable">Current_choice</param>
+                            <param id="1" name="Value">&quot;first_choice&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="780411632723747" type="Function">
+                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="850521173239841" type="System">
+                            <param id="0" name="Tag">&quot;Choice_done&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="148869688591590" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Choice_result&amp;&quot;_answer/dial1/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="128185920642836" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="631602931616786" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Choice_result&amp;&quot;_answer/dial2/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="322590621202764" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="183760755555414" type="System">
+                            <param id="0" name="Variable">Current_choice</param>
+                            <param id="1" name="Value">&quot;second_choice&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="450505100055042" type="Function">
+                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="575162163530208" type="System">
+                            <param id="0" name="Tag">&quot;Choice_done&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="547978421379254" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Choice_result&amp;&quot;_answer/dial1/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="479308867861250" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="298577938679579">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="872599327975448" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;alex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="930623770268902" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;mai&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318472619923052">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="142620927345671" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;appoline&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="620151372222851" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;nassim&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="474716700625777">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="718760338165869" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;mai&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="837496091154092" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;alex&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="934557549378056">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="275996084689661" type="System">
+                                    <param id="0" name="Variable">character_name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;nassim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="736691726975227" type="CinematicCharacter">
+                                    <param id="0" name="Animation">&quot;appoline&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="187596026340939">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="477675031875727" type="Dialog_interieur">
+                                    <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Choice_result&amp;&quot;_answer/dial2/text()&quot;)</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="324353231524765" type="System">
+                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="134566417447106" type="Dialog_interieur">
+                                    <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Choice_result&amp;&quot;_answer/dial3/text()&quot;)</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="316513858668683" type="System">
+                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="694398443913913" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_choice&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="864928148211549" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="458796589504681" type="FadeInBlack" />
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="319150117582819" type="FadeInBlack">
+                                    <param id="0" name="Fade-in time">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="969635888830547" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="984038147855599" type="Player" />
+                                <action id="-2" name="Go to layout" sid="415573059337169" type="System">
+                                    <param id="0" name="Layout">Fin_Provisoire</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="242590225434267" title="Main Interaction2">
+                    <sub-events>
+                        <event-block any="1" sid="990983979395584">
+                            <conditions>
+                                <condition id="0" name="On click" sid="894499779003514" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="986496504007227" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="463785017388081">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="259033201903930" type="System">
+                                            <param id="0" name="Variable">IsDisplayingDialog</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-42" name="Signal" sid="680611126712199" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="971444485588517">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="252414715592642" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="487970330378201" type="Player">
+                                    <param id="0" name="Object">PNJ_dialog_trigger</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="733327805098640" type="PNJ_family">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Player.X</param>
+                                    <param id="2" name="Y">Player.Y</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="922832409079691" type="System">
+                                    <param id="0" name="Variable">IsDisplayingDialog</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="888371492967889" type="System">
+                                    <param id="0" name="Variable">personnage</param>
+                                    <param id="1" name="Value">PNJ_family.personnage</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="541256354705468" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Value">PNJ_family.type</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="825072863086970" type="System">
+                                    <param id="0" name="Variable">CurrentPNJAnswerType</param>
+                                    <param id="1" name="Value">PNJ_family.answer_type</param>
+                                </action>
+                                <action id="0" name="Call function" sid="527041662910910" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="425494542451252">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="910045951561718" type="PNJ_family">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;base&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="132407866130785" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/&quot;&amp;personnage&amp;&quot;/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="880969937452056" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="355171508049664" type="Function">
+                                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="685408640757825">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="410838416401542" type="PNJ_family">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;panel&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="174012628978238" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/&quot;&amp;personnage&amp;&quot;/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="702069253992111" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="514969907188515" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="699979886432189">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="941328706361444" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Choice</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="150401700545056" type="Choice" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="988813761575783" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_choice&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="137849523727550">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="118706481179747" type="System">
+                                            <param id="0" name="Variable">IsFinalDialog</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="626207481487162">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="148795668422781" type="System">
+                                                    <param id="0" name="First value">Choice.Choice_type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">CurrentPNJAnswerType</param>
+                                                </condition>
+                                                <condition id="-15" name="Pick nearest/furthest" sid="426277877885221" type="PNJ_family">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="X">Player.X</param>
+                                                    <param id="2" name="Y">Player.Y</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="753204492299292" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/bonne_reponse/text()&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="978890344066818">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="322176704390505" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="360136469016909" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/explication_&quot;&amp;personnage&amp;&quot;/text()&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="153751917601487">
+                                            <conditions>
+                                                <condition id="-15" name="Pick nearest/furthest" sid="644760055075854" type="PNJ_family">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="X">Player.X</param>
+                                                    <param id="2" name="Y">Player.Y</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-41" name="Wait for signal" sid="373402367524804" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="923801949024827" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="Fade2" id="1" name="Start fade" sid="173004519812788" type="PNJ_family" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="735046455542396">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="969645153119259" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="752052517222979" type="System">
+                                            <param id="0" name="Variable">Choice_result</param>
+                                            <param id="1" name="Value">Choice.Choice_type</param>
+                                        </action>
+                                        <action id="-42" name="Signal" sid="282973855590187" type="System">
+                                            <param id="0" name="Tag">&quot;Choice_done&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="612755006347282" title="Functions2">
+                    <sub-events>
+                        <event-block sid="369798836417600">
+                            <conditions>
+                                <condition id="0" name="On function" sid="671841996290160" type="Function">
+                                    <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="844483878130657" type="Dialog_interieur">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="234141627464768" type="DialogBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="811315362348463" type="System">
+                                    <param id="0" name="Variable">IsDisplayingDialog</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="8Direction" id="3" name="Set speed" sid="263388123748928" type="Player">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="203759045591802" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="145979295394990">
+                            <conditions>
+                                <condition id="0" name="On function" sid="202268234507660" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="918272494260331" type="DialogBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="152754638764216" type="Dialog_interieur">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="156088952770924" type="System">
+                                    <param id="0" name="Variable">IsDisplayingDialog</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="916515034690333" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="600718558264768">
+                            <conditions>
+                                <condition id="0" name="On function" sid="751871637693524" type="Function">
+                                    <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="893710313961441" type="Choice">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="503641228354122" type="Dialog_choice">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="289290573534069">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="176286705587974" type="System">
+                                            <param id="0" name="Variable">IsFinalDialog</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="437370193083643">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="872969523693872" type="System">
+                                                    <param id="0" name="Object">Dialog_choice</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="466034816872209" type="Dialog_choice">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/Dialogue/fin_&quot;&amp;character_name&amp;&quot;/&quot;&amp;Current_choice&amp;&quot;/&quot;&amp;Dialog_choice.Choice_type&amp;&quot;/text()&quot;)&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="552289670716506">
+                            <conditions>
+                                <condition id="0" name="On function" sid="642566419953182" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="468165542396749" type="Choice">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="719540643394555" type="Dialog_choice">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="343675405360991" title="Initialisation2">
+                    <sub-events>
+                        <event-block sid="688357262391587">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="425624582161133" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Dialogue_chapitre_3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Load" sid="562842156712681" type="XML">
+                                    <param id="0" name="XML">AJAX.LastData</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="627677422016992" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Test is &quot;&amp;xml.StringValue(&quot;/Dialogue/bonne_reponse/attribute::lang&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="698728046517378">
+                            <conditions>
+                                <condition id="1" name="On error" sid="427337406220760" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Dialogue_chapitre_3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="974767427551027" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">AJAX.Progress</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="675479364209234">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="764072968200939" type="Pnj" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="583316929178854" type="Pnj">
+                                    <param id="0" name="Animation">Self.personnage</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="582359819913371" type="Pnj">
+                                    <param id="0" name="Object">PNJ_dialog_trigger</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="352038668387075">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="671555611605223" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="516000130574266" type="System">
+                    <param id="0" name="Variable">IsFinalDialog</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668695577701037">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="811719652975882" type="Player">
+                    <param id="0" name="Object">MoveToLayout</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="287255397546426">
+                    <conditions>
+                        <condition id="-11" name="Is within angle" sid="304038060468303" type="MoveToLayout">
+                            <param id="0" name="Within">0.5</param>
+                            <param id="1" name="Angle">Player.8Direction.MovingAngle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="360759652511704" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="180118893102125" type="Player">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="205013040508241" type="System">
+                            <param id="0" name="Variable">PreviousMoveToLayoutUID</param>
+                            <param id="1" name="Value">MoveToLayout.UID</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="165214320129990" type="System">
+                            <param id="0" name="Variable">PreviousDistrict</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="484136417926549" type="System">
+                            <param id="0" name="Variable">PreviousPlayerX</param>
+                            <param id="1" name="Value">MoveToLayout.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="533553799426010" type="System">
+                            <param id="0" name="Variable">PreviousPlayerY</param>
+                            <param id="1" name="Value">MoveToLayout.Y + (MoveToLayout.Height/2)</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="109451487013407" type="FadeInBlack" />
+                        <action id="-16" name="Wait" sid="537177674059553" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="289949347588796" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="114363247340384" type="Player">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Droite</comment>
+                        <event-block sid="500279602617217">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="305478960659684" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="138029068039379" type="Player">
+                                    <param id="0" name="X">Player.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Bas</comment>
+                        <event-block sid="519055336358450">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="574137459407358" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="201136903115001" type="Player">
+                                    <param id="0" name="Y">Player.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Gauche</comment>
+                        <event-block sid="516441692200348">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="990226630122891" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="896430015148559" type="Player">
+                                    <param id="0" name="X">LayoutWidth-Player.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Haut</comment>
+                        <event-block sid="878007991368103">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="961243552869317" type="MoveToLayout">
+                                    <param id="0" name="Within">0.5</param>
+                                    <param id="1" name="Angle">270</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="559458828354726" type="Player">
+                                    <param id="0" name="Y">LayoutHeight-Player.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="140264074212572">
+                            <conditions />
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="552007595579624" type="System">
+                                    <param id="0" name="Layout">MoveToLayout.LayoutName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

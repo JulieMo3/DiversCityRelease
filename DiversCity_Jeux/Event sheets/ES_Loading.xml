@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Loading</name>
+    <events>
+        <event-group description="" sid="489534494516736" title="Barre de chargement">
+            <sub-events>
+                <event-block sid="323577862120424">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="566864974580504" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="899151475616490" type="LoadingBar">
+                            <param id="0" name="Width">585*loadingprogress</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="938912956626830" title="Next Layout">
+            <sub-events>
+                <event-block sid="688258922586768">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="884406135234599" type="LoadingBar">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Width">585</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="130820248523098" type="System">
+                            <param id="0" name="Seconds">8</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="223959412084581" type="System">
+                            <param id="0" name="Layout">MainRoom</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

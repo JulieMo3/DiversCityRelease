@@ -1,0 +1,1292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Pnj</name>
+    <events>
+        <variable constant="0" name="isRacisteInteractedTrue" sid="562459173923795" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentPNJAnswerType" sid="301424871675679" static="0" type="text"></variable>
+        <variable constant="0" name="HasEarnedBadge" sid="783500346049951" static="0" type="number">0</variable>
+        <variable constant="0" name="HasBottle" sid="170239857834417" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentBadgeConversation" sid="313110669326207" static="0" type="text"></variable>
+        <variable constant="0" name="IsFollowedByFriends" sid="995373987761172" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentPNJType" sid="617083175960842" static="0" type="text"></variable>
+        <variable constant="0" name="IsDisplayingDialog" sid="221169909295976" static="0" type="number">0</variable>
+        <event-group description="" sid="544631233265228" title="Main Interaction">
+            <sub-events>
+                <event-block any="1" sid="953915302648103">
+                    <conditions>
+                        <condition id="0" name="On click" sid="853245351000542" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="906159827425198" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="900953373025803">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="327597851705768" type="System">
+                                    <param id="0" name="Variable">IsDisplayingDialog</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="509860965027000" type="System">
+                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="149914161201100">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="367488334388255" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="691409331424800" type="Player">
+                            <param id="0" name="Object">PNJ_dialog_trigger</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="404905683733029" type="PNJ_family">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </condition>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="251504042274811" type="System">
+                            <param id="0" name="Variable">IsDisplayingDialog</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="644096642279772" type="System">
+                            <param id="0" name="Variable">personnage</param>
+                            <param id="1" name="Value">PNJ_family.personnage</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="505276048314008" type="System">
+                            <param id="0" name="Variable">CurrentPNJType</param>
+                            <param id="1" name="Value">PNJ_family.type</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="235583759651214" type="System">
+                            <param id="0" name="Variable">CurrentPNJAnswerType</param>
+                            <param id="1" name="Value">PNJ_family.answer_type</param>
+                        </action>
+                        <action id="0" name="Call function" sid="484544951414521" type="Function">
+                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="604267673980800">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="424187465416366" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;base&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="177092619736002">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="298332725900542" type="System">
+                                            <param id="0" name="First value">xml.NodeCount(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/&quot;&amp;character_name&amp;&quot;_positive/text()&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="984300178972975" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="907574192091499" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="982904140121916" type="Function">
+                                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="942111038938264">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="608274718759319" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="509360855039664" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_&quot;&amp;(floor(random(0,2)) + 1)&amp;&quot;/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="162866227031072" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="378529827116237" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="912566196398094">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="858909795860641" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;friend&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="810610254603068" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;parent&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="914570302552518">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="546526268412922" type="System">
+                                            <param id="0" name="First value">xml.NodeCount(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_&quot;&amp;character_name&amp;&quot;/text()&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="639804100603607" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_&quot;&amp;character_name&amp;&quot;/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="564317253328152" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="673704020376116" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="711455552952790">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="729418735535321" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="706309604854713" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="945768416859722" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="768457597477294" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="Result" sid="774133710628897" static="0" type="number">0</variable>
+                        <event-block sid="428653560559512">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="318323448782566" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;quest&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="854978631295062" type="System">
+                                    <param id="0" name="Variable">CurrentBadgeConversation</param>
+                                    <param id="1" name="Value">PNJ_family.badge</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="300199219621935">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="887549674050901" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsEarned&quot;, CurrentBadgeConversation)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="269426846958500" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="267225144692164" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="338838658482469" type="Function">
+                                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="377190291886427">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="324195746674033" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="865573651451432" type="Dialog_interieur">
+                                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="191848049704371" type="System">
+                                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="376062117408160" type="Function">
+                                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="819103421393917">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="372524983474544" type="System">
+                                    <param id="0" name="Variable">CurrentPNJType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;special&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="122533851963888" type="System">
+                                    <param id="0" name="Variable">CurrentBadgeConversation</param>
+                                    <param id="1" name="Value">PNJ_family.badge</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="430888494584867">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="726739606581195" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;raciste&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="957545037809088">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="402528776615363" type="badge_racisme">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="768731704279189" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="190522957556172" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="866745380229618" type="Function">
+                                                    <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="823029530345383" type="System">
+                                                    <param id="0" name="Variable">isRacisteInteractedTrue</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="505007801262519">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="487974827664940" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="781651920213202" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="332952507607857" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="206449882500592" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="494255934283112">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="137669558259486" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;victime_raciste&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="327509896146080">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="108566157228003" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="539564260035809" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="244692039073410" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="500380773170837" type="Function">
+                                                    <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="329492197671841">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="780662145044171" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="500015890405440" type="System">
+                                                    <param id="0" name="Variable">isRacisteInteractedTrue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="180234308192045" type="badge_racisme">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="777273466827774" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="598121840656636" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="271845356292914" type="Function">
+                                                    <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="525102822958859">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="568480437614171" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="977932883756690" type="System">
+                                                    <param id="0" name="Variable">isRacisteInteractedTrue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143876613694387" type="badge_racisme">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="MoveTo" id="6" name="Move to object" sid="883258829651947" type="animRaciste">
+                                                    <param id="0" name="Target">triggerLeft</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="837840282809941" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="534842250158141" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="985700377906126" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_2/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="897292206569770" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="310466934508319" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_3/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="971460728696891" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="833933536128910" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_4/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="191100579346493" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="105722580090255" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_5/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="662290471584568" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="733820156780662" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_6/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="564790017876713" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="800375363361741" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_7/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="495398031638128" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="700337734181528" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_8/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="708334779508013" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="147851332829353" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_9/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="726504527917682" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="507289020872610" type="Function">
+                                                    <param id="0" name="Name">&quot;Win_badge&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="782148074834547">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="338053763336374" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="154658571590464" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="193667105115887" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="625574238689643" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="763890019881304">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="230347113769174" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;sdf&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="491798469661928">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="244646697500678" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="921415941490716" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="515660114831052" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="491820964227814" type="Dialog_interieur">
+                                                    <param id="0" name="Text">uppercase(mid(character_name, 0,1))&amp;mid(character_name, 1, 20) &amp; xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_2/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="378334342386497" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="382654379347636" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_3/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="975217337703852" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="231351549324301" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="827261159400806">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="263916959781948" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="699641205999811" type="System">
+                                                    <param id="0" name="Variable">HasBottle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="555883641159155" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="745476273209274" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="511655701020804" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="878337534511312">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="754529775980330" type="System" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="848258725535565" type="badge_solidarite">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="395390898179958" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/bottle/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="713590033715767" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="330677186817715" type="Dialog_interieur">
+                                                    <param id="0" name="Text">uppercase(mid(character_name, 0,1))&amp;mid(character_name, 1, 20) &amp; xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/bottle/dial_2/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="592164580077345" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="278772504605505" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/bottle/dial_3/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="179648136420396" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="347952452708954" type="Function">
+                                                    <param id="0" name="Name">&quot;Win_badge&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="130958770835417">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="619460571755252" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="911408731590225" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="254019409554406" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="123508039353792" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="151782807005411">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="506843567561295" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pas_solidaire&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="164206477048620">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="639304788053319" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="799659375973780" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="829927921941333" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="881783821930765" type="Dialog_interieur">
+                                                    <param id="0" name="Text">uppercase(mid(character_name, 0,1))&amp;mid(character_name, 1, 20) &amp; xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_2/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="453202744361360" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="902625095646670" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/dial_3/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="693630730278297" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="272717512584986" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="773376800156970">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="380969643571830" type="System" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="981522143099339" type="badge_solidarite">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="623157174594850" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="844599291733426" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="649396642218963" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="126019324533463">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="160744083674908" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="420660004633113" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/bottle/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="238867839434261" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="777108681436882" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="641918502904957">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="751057281322992" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;kevin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="167461125100702">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="159780163135979" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="889123764873876" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="595147565033253" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="766114908746109" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="532562797281224">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="276331169035520" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="274942772167419" type="System">
+                                                    <param id="0" name="Variable">IsFollowedByFriends</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="966491587455365" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="332374993608628" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="856734235682901" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="464720212912426">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="702511925866719" type="System" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="620843117750626" type="badge_isolement">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="202394820167033" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/friends/dial_1/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="579394026788996" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="738067685774213" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/friends/dial_2/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="908211131372300" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="636201890336016" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/friends/dial_3/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="326844956690447" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="976652781768895" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/friends/dial_4/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="526518724541583" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="865767770655464" type="Function">
+                                                    <param id="0" name="Name">&quot;Win_badge&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="275061050656364">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="360538849456929" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="777206401072581" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="673072521913353" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="953622495590748" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="799898805647151">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="241972334302258" type="System">
+                                            <param id="0" name="First value">mid(personnage, 0, 12)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;parent_kevin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="334736105724111" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Value">mid(personnage, 0, 12)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="348357393298977">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="255735660965648" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="165163957256010" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="806963167621893" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="608091398142092" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="915319736088782">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="155402447477118" type="System" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589365993435960" type="badge_isolement">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="895367676958091" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="836770723407250" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="843396443498655" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="129265909900151">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="325982299747101" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="722853077682719" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="809181034425479" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="861881098425283" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="885568114848547">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="230786181251444" type="System">
+                                            <param id="0" name="First value">mid(personnage, 0, 9)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;ami_kevin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="251102528913622" type="System">
+                                            <param id="0" name="Variable">personnage</param>
+                                            <param id="1" name="Value">mid(personnage, 0, 9)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="344897833606318">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="868925534103295" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="698413878270688" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="186189676090806" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="729483439660541" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="559734671355441">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="793442456455293" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="982435113258978" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(&quot;parent_kevin&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="203179693015401" type="System">
+                                                    <param id="0" name="First value">Dialog_dictionary.Get(personnage)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="270259279685178" type="System">
+                                                    <param id="0" name="Variable">IsFollowedByFriends</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="602206848354398" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/second/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="110875045503494" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="872848834946790" type="System">
+                                                    <param id="0" name="Variable">IsFollowedByFriends</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="514402619301623" type="FadeInBlack" />
+                                                <action id="-16" name="Wait" sid="942644655882461" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="173236353754099" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="519267283700241" type="System">
+                                                    <param id="0" name="Variable">PreviousMoveToLayoutUID</param>
+                                                    <param id="1" name="Value">422</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="727407453749325" type="System">
+                                                    <param id="0" name="Variable">PreviousDistrict</param>
+                                                    <param id="1" name="Value">&quot;Solidaire&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="208577459561714" type="System">
+                                                    <param id="0" name="Variable">PreviousPlayerX</param>
+                                                    <param id="1" name="Value">496</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="692081244921920" type="System">
+                                                    <param id="0" name="Variable">PreviousPlayerY</param>
+                                                    <param id="1" name="Value">667</param>
+                                                </action>
+                                                <action id="-25" name="Go to layout (by name)" sid="768143210954550" type="System">
+                                                    <param id="0" name="Layout">&quot;Maison6&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="574251793713338">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="500769337973149" type="System" />
+                                                <condition id="-8" name="Is boolean instance variable set" sid="717863711980687" type="badge_isolement">
+                                                    <param id="0" name="Instance variable">Earned</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="366856697551107" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/last/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="170788552304042" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="809151950255482" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="492639789231763">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="814274874749561" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="937743791309132" type="Dialog_interieur">
+                                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/text()&quot;)</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="154131437680172" type="System">
+                                                    <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="581013833180882" type="Function">
+                                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="953611106280449">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Add key" sid="552412743104050" type="Dialog_dictionary">
+                                    <param id="0" name="Key">personnage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="150242701883994">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="893041877235818" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Choice</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="288370974660277" type="Choice" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="101572782880958" type="Function">
+                            <param id="0" name="Name">&quot;Hide_choice&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="287803872505818" type="Dialog_interieur">
+                            <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/dial_&quot;&amp;Choice.Choice_type&amp;&quot;/text()&quot;)</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="151485832363899" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="320305617507058" type="Function">
+                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="142740075050518">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="468006214271983" type="System">
+                                    <param id="0" name="First value">Choice.Choice_type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">CurrentPNJAnswerType</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="140507672636545" type="Answers_dictionary">
+                                    <param id="0" name="Key">CurrentBadgeConversation&amp;&quot;_&quot;&amp;Choice.Choice_type</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="112530439606563">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="901327181110077" type="System">
+                                            <param id="0" name="First value">Answers_dictionary.Get(CurrentBadgeConversation&amp;&quot;_positive&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="517377245216693" type="System">
+                                            <param id="0" name="First value">Answers_dictionary.Get(CurrentBadgeConversation&amp;&quot;_negative&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="969276946912393" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsEarned&quot;, CurrentBadgeConversation)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="748425829696020" type="Function">
+                                            <param id="0" name="Name">&quot;Win_badge&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="595784131901336">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="507698778096331" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="914293457999606" type="Function">
+                                    <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="653743387972537" type="Function">
+                                    <param id="0" name="Name">&quot;HideSac&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="969601392931546" title="Functions">
+            <sub-events>
+                <event-block sid="941120951846574">
+                    <conditions>
+                        <condition id="0" name="On function" sid="496162415258803" type="Function">
+                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="148586615239912" type="Dialog_interieur">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="941417358508085" type="DialogBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="664958076353450" type="System">
+                            <param id="0" name="Variable">IsDisplayingDialog</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="868361167792428" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="3" name="Set speed" sid="442721685163997" type="Player">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="318238498010646">
+                    <conditions>
+                        <condition id="0" name="On function" sid="215327341531738" type="Function">
+                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="328177335852465" type="DialogBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="645593724355094" type="Dialog_interieur">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="339323400552478" type="System">
+                            <param id="0" name="Variable">IsDisplayingDialog</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="515546465304784" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="578416115486241">
+                    <conditions>
+                        <condition id="0" name="On function" sid="456506505343117" type="Function">
+                            <param id="0" name="Name">&quot;Display_choice2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="764352480481746" type="Choice">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="877296837799404" type="Dialog_choice">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="485953594964375" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="117870110565482" type="Function">
+                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="728257714099440">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="227068370627842" type="System">
+                                    <param id="0" name="Object">Dialog_choice</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="844260678163039" type="Dialog_choice">
+                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/first/&quot;&amp;character_name&amp;&quot;_&quot;&amp;Dialog_choice.Choice_type&amp;&quot;/text()&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="706775425561271">
+                    <conditions>
+                        <condition id="0" name="On function" sid="743156576936055" type="Function">
+                            <param id="0" name="Name">&quot;Display_choice&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="876243693012494" type="Choice">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="217266845093626" type="Dialog_choice">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="123635178178867">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="129917926302951" type="System">
+                                    <param id="0" name="Object">Dialog_choice</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="320467650463426" type="Dialog_choice">
+                                    <param id="0" name="Text">xml.StringValue(&quot;/dialog/&quot;&amp;personnage&amp;&quot;/&quot;&amp;character_name&amp;&quot;_&quot;&amp;Dialog_choice.Choice_type&amp;&quot;/text()&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="322478009044669">
+                    <conditions>
+                        <condition id="0" name="On function" sid="618086334371642" type="Function">
+                            <param id="0" name="Name">&quot;Hide_choice&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="589929745282043" type="Choice">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="142127319309932" type="Dialog_choice">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311027463971382">
+                    <conditions>
+                        <condition id="0" name="On function" sid="783754612420654" type="Function">
+                            <param id="0" name="Name">&quot;Win_badge&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="606372207189282" type="Dialog_interieur">
+                            <param id="0" name="Text">&quot;Vous avez obtenu le badge &quot; &amp;  uppercase(mid(CurrentBadgeConversation, 0,1))&amp;mid(CurrentBadgeConversation, 1, 20)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="519790561234700" type="Function">
+                            <param id="0" name="Name">&quot;Display_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="351515758027132" type="Function">
+                            <param id="0" name="Name">&quot;DisplaySac&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="142114186255110" type="Function">
+                            <param id="0" name="Name">&quot;EarnBadge&quot;</param>
+                            <param id="1" name="Parameter {n}">CurrentBadgeConversation</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="384321079213055" type="System">
+                            <param id="0" name="Tag">&quot;Dialog_next&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="120089087645163" type="Function">
+                            <param id="0" name="Name">&quot;HideSac&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="623563737545975" type="Function">
+                            <param id="0" name="Name">&quot;Hide_dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="892016778521290" type="System">
+                            <param id="0" name="Variable">HasEarnedBadge</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="158218732749216" type="FadeInBlack" />
+                        <action id="-16" name="Wait" sid="489753576289316" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="278220981384373" type="System">
+                            <param id="0" name="Variable">PreviousMoveToLayoutUID</param>
+                            <param id="1" name="Value">242</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="607576369495540" type="System">
+                            <param id="0" name="Variable">PreviousDistrict</param>
+                            <param id="1" name="Value">&quot;Centre&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="536093181304282" type="System">
+                            <param id="0" name="Variable">PreviousPlayerX</param>
+                            <param id="1" name="Value">784</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="282513303246607" type="System">
+                            <param id="0" name="Variable">PreviousPlayerY</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="944255902658975" type="System">
+                            <param id="0" name="Layout">Police</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="507128161130436" title="Initialisation">
+            <sub-events>
+                <event-block sid="331573216479042">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="218807356269258" type="Pnj" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="200502696274498" type="Pnj">
+                            <param id="0" name="Animation">Self.personnage</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="861431175072256" type="Pnj">
+                            <param id="0" name="Object">PNJ_dialog_trigger</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

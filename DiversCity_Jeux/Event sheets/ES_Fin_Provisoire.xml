@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Fin_Provisoire</name>
+    <events>
+        <event-block sid="485788385461819">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="488070136886841" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-3" name="Create object" sid="903926199320997" type="System">
+                    <param id="0" name="Object to create">FadeOutBlack</param>
+                    <param id="1" name="Layer">19</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action disabled="1" id="-7" name="Set size" sid="304909077509225" type="FadeOutBlack">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="6" name="Stop" sid="576851977436339" type="Audio">
+                    <param id="0" name="Tag">&quot;Music3&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="679518971030730" type="Audio">
+                    <param id="0" name="Folder">1</param>
+                    <param id="1" name="Audio file name">&quot;Credits&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">15</param>
+                    <param id="2" name="Tag (optional)">&quot;Music4&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="498747348937249" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="322718691254340" type="Titre_credits">
+                    <param id="0" name="Text">&quot;L&apos;équipe de Ludus Académie vous remercie d&apos;avoir joué !&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="297806600447209" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="514600171296382" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="277957175304318" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="693978827841385" type="Personne1">
+                    <param id="0" name="Text">&quot;Jérôme Hatton&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="202214364342342" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="572305556553267" type="Personne1" />
+                <action id="-16" name="Wait" sid="576944692437874" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="552297798422279" type="Personne2">
+                    <param id="0" name="Text">&quot;Kevin Poirier / Julie Morand / Noé Gigi / Emilie Vienne / Woody Massart&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="683337633545449" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="632990348869713" type="Personne2" />
+                <action id="-16" name="Wait" sid="917107016480259" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="348912814680486" type="Personne3">
+                    <param id="0" name="Text">&quot;Julien Renner / Jonathan Fellrath / Arnaud Schmidt / Cindy Balta / Louis Stadelmann&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="125349387893864" type="Personne3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="466384516007277" type="Personne3" />
+                <action id="-16" name="Wait" sid="733922140070732" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="275007824719022" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Game Design&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="391709485683910" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="215521555992002" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="321910294953320" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="370542031097308" type="Personne1">
+                    <param id="0" name="Text">&quot;Julie Morand / Kevin Poirier&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="643500599396400" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="193629837972980" type="Personne1" />
+                <action id="-16" name="Wait" sid="359747692610706" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="787015405555746" type="Personne2">
+                    <param id="0" name="Text">&quot;Cindy Balta / Arnaud Schmidt&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="825482970312750" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="933801461806451" type="Personne2" />
+                <action id="-16" name="Wait" sid="975992282831370" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="513258046930783" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Programmation&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="194838093089421" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="635761525345014" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="845826947666531" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="103359636065975" type="Personne1">
+                    <param id="0" name="Text">&quot; Noé Gigi / Julien Renner / Jonathan Fellrath&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="340995306644565" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="687688725320233" type="Personne1" />
+                <action id="-16" name="Wait" sid="270884020531872" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="615556197604488" type="Personne2">
+                    <param id="0" name="Text">&quot;Louis Stadelmann / Arnaud Schmidt&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="814602028532220" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="765224427230104" type="Personne2" />
+                <action id="-16" name="Wait" sid="974652118884461" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="474924528070407" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Sound Design &amp; Musiques&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="641643693869393" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="182117557141226" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="103632327918364" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="421847491940306" type="Personne2">
+                    <param id="0" name="Text">&quot;Kevin MacLeod&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="872779356216523" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="783154512211942" type="Personne2" />
+                <action id="-16" name="Wait" sid="875722939534661" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="330311302699784" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Graphisme&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="296838206858430" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="448868127345124" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="365680150783056" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="693066393416060" type="Personne1">
+                    <param id="0" name="Text">&quot;Emilie Vienne&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="747727276250449" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="640936292967501" type="Personne1" />
+                <action id="-16" name="Wait" sid="397311994217313" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="164906177884160" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Ce jeu a été fait en partenariat avec la MDA du Cher.&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="358212618492619" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="259139637067530" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="812174799491102" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="141947323335129" type="Personne1">
+                    <param id="0" name="Text">&quot;Nathalie Verne / Adrien Augizeau&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="180239532274808" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="163933502971609" type="Personne1" />
+                <action id="-16" name="Wait" sid="843761487082568" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="353863440204603" type="Personne2">
+                    <param id="0" name="Text">&quot;Sarah Gautrault / Valentin Tréchaud&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="979574292835010" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="292067732788086" type="Personne2" />
+                <action id="-16" name="Wait" sid="288767469515709" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="123197983646132" type="Personne3">
+                    <param id="0" name="Text">&quot;Ainsi que tous les jeunes qui ont apportés leurs idées au projet.&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="994564390785529" type="Personne3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="856712558387214" type="Personne3" />
+                <action id="-16" name="Wait" sid="245370534096839" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="0" name="Set text" sid="881906772662744" type="Titre_credits">
+                    <param id="0" name="Text">&quot;Un grand merci à nos partenaires !&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="592429021000100" type="Titre_credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="579832926800709" type="Titre_credits" />
+                <action id="-16" name="Wait" sid="476990344299285" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="669750922755486" type="Personne1">
+                    <param id="0" name="Text">&quot;La Préfecture du Cher&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="547282574330200" type="Personne1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="750223165045114" type="Personne1" />
+                <action id="-16" name="Wait" sid="635538545265007" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="858373418622342" type="Personne2">
+                    <param id="0" name="Text">&quot;La Maison Des Adolescents du Cher&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="790134034511225" type="Personne2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="211875016022651" type="Personne2" />
+                <action id="-16" name="Wait" sid="355489363685570" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="465559925682433" type="Personne3">
+                    <param id="0" name="Text">&quot;Ludus Académie&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="609840506492535" type="Personne3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="970942844176146" type="Personne3" />
+                <action id="-16" name="Wait" sid="450947533665924" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="33" name="Stop all" sid="965039571241008" type="Audio" />
+                <action id="-21" name="Reset global variables" sid="388640384312250" type="System" />
+                <action id="-2" name="Go to layout" sid="731080366903515" type="System">
+                    <param id="0" name="Layout">Loading</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

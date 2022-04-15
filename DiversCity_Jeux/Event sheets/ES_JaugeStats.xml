@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_JaugeStats</name>
+    <events>
+        <variable constant="0" name="BONHEUR" sid="908665442580849" static="0" type="number">10</variable>
+        <variable constant="0" name="INFLUENCE_LAGRANDEECLIPSE" sid="782462014434492" static="0" type="number">10</variable>
+        <variable constant="0" name="INFLUENCE_ITERATIONISME" sid="798144548483665" static="0" type="number">10</variable>
+        <variable constant="0" name="SECURITE" sid="908646010960539" static="0" type="number">10</variable>
+        <variable constant="0" name="SOLIDARITE" sid="394776366508924" static="0" type="number">10</variable>
+        <variable constant="0" name="TOLERANCE" sid="328794491105225" static="0" type="number">10</variable>
+    </events>
+</c2eventsheet>

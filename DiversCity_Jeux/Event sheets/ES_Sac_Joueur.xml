@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Sac_Joueur</name>
+    <events>
+        <event-group description="" sid="147662832858307" title="Control_Player3">
+            <sub-events>
+                <event-block sid="443624912339139">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="899158891496549" type="System">
+                            <param id="0" name="Variable">transition_c2_once</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="130537847687085" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="402635439231582">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="697713074434526" type="Player" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="199611091391037">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="672560145044483" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="141488304510287" type="Player">
+                                            <param id="0" name="Instance variable">last_direction</param>
+                                            <param id="1" name="Value">&quot;right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="525167460491215">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="745009161703838" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">-0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="167951109786471" type="Player">
+                                            <param id="0" name="Instance variable">last_direction</param>
+                                            <param id="1" name="Value">&quot;left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="326524192184990">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="713984443982572" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorY</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="591824918345901" type="Player">
+                                            <param id="0" name="Instance variable">last_direction</param>
+                                            <param id="1" name="Value">&quot;down&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="472289454226348">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="856361080275294" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorY</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">-0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="398443559164588" type="Player">
+                                            <param id="0" name="Instance variable">last_direction</param>
+                                            <param id="1" name="Value">&quot;up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="631065213494668">
+                                    <conditions />
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="218550130047020" type="Player">
+                                            <param id="0" name="Animation">character_name&amp;&quot;_walk_&quot;&amp;Player.last_direction</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="483910485156632">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="240080195994561" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="516699798193922" type="Player">
+                            <param id="0" name="Animation">character_name&amp;&quot;_idle_&quot;&amp;Player.last_direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="666442852156553">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="450057592955312" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="201928169669651" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="264431559511336" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="111392023942329">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="470008242968181" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="436342747479801" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="903129008827754" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="993641370971307">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="165472807052676" type="Keyboard">
+                            <param id="0" name="Key">81</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="794317718764673" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="379779834745215" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="160581282225933">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="296954431712493" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="267387038690005" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="835581370063006" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="863250226359513" title="HUD_Zones">
+            <sub-events>
+                <event-block sid="384804439914625">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="779205762699943" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="867536102338562" type="Function">
+                            <param id="0" name="Name">&quot;HideSac&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="554714962711282" type="Player" />
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="294626684021519">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="285637831922312" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Centre&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="372814600444612" type="HUD_Zone_Text">
+                                    <param id="0" name="Text">&quot;Le Centre&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="314010442553846">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="514132947473948" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Culturel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="427567698736670" type="HUD_Zone_Text">
+                                    <param id="0" name="Text">&quot;District Culturel&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="947475334367661">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="662707390332505" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Solidaire&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="408105940546756" type="HUD_Zone_Text">
+                                    <param id="0" name="Text">&quot;District Solidaire&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="305505698661371">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="332521413890197" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Energetique&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="309440876725536" type="HUD_Zone_Text">
+                                    <param id="0" name="Text">&quot;District Energétique&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="923686324237588">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="294297769898240" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Residentiel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="963728038055691" type="HUD_Zone_Text">
+                                    <param id="0" name="Text">&quot;District Résidentiel&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="571428255770124" title="UI">
+            <sub-events>
+                <event-block sid="485117693697575">
+                    <conditions>
+                        <condition id="0" name="On function" sid="448379656029314" type="Function">
+                            <param id="0" name="Name">&quot;DisplaySac&quot;</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="381455177844718" type="MoveTo">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="760699621851334" type="MoveTo">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">MoveTo.initialX</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="889002334809815" type="MoveTo">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">MoveTo.initialY</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="199714031942719" type="sac_icon">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883161234234746">
+                    <conditions>
+                        <condition id="0" name="On function" sid="370361458842857" type="Function">
+                            <param id="0" name="Name">&quot;HideSac&quot;</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="393418271444480" type="MoveTo">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="795371045546413" type="MoveTo">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">sac_icon.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="704157048049145" type="MoveTo">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">sac_icon.Y</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="255442773032797" type="sac_icon">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="573786075256908">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="675036372756363" type="Badge">
+                            <param id="0" name="Instance variable">Earned</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="642653576422158" type="Badge">
+                            <param id="0" name="Instance variable">Saturation</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="139787657800527" type="Badge">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">Badge.Saturation</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="301776216292492" type="Badge">
+                            <param id="0" name="Instance variable">Saturation</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="158740810762887">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="364678375733577" type="Sac_categorie_text" />
+                        <condition disabled="1" id="-16" name="Is on layer" sid="955836760023475" type="Sac_categorie_text">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="573654069755842" type="Sac_categorie">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Sac_categorie_text.x</param>
+                            <param id="2" name="Y">Sac_categorie_text.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="926260396360973" type="Sac_categorie_text">
+                            <param id="0" name="Pin to">Sac_categorie</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248330568133480">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="334631174905482" type="MoveTo" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="459203117134274" type="MoveTo">
+                            <param id="0" name="Instance variable">initialX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="766048698035269" type="MoveTo">
+                            <param id="0" name="Instance variable">initialY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="968772464630982" type="MoveTo">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="374300322567365" type="MoveTo">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="960844992643665">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="892433213631849" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="858035483654361">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="780103577917004" type="System">
+                                    <param id="0" name="Object">MoveTo</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="197932425283197" type="System">
+                                    <param id="0" name="First value">distance(MoveTo.X, MoveTo.Y, MoveTo.targetX, MoveTo.targetY)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="700336688666205" type="MoveTo">
+                                    <param id="0" name="X">lerp(MoveTo.X, MoveTo.targetX, dt*4)</param>
+                                    <param id="1" name="Y">lerp(MoveTo.Y, MoveTo.targetY, dt*4)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="546635777402827">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="859371780655240" type="System">
+                                            <param id="0" name="First value">distance(MoveTo.X, MoveTo.Y, MoveTo.targetX, MoveTo.targetY)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="919987344011603" type="MoveTo">
+                                            <param id="0" name="X">MoveTo.targetX</param>
+                                            <param id="1" name="Y">MoveTo.targetY</param>
+                                        </action>
+                                        <action id="-42" name="Signal" sid="931276528287780" type="System">
+                                            <param id="0" name="Tag">&quot;MoveDone&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="213967611583255">
+                    <conditions>
+                        <condition id="0" name="On function" sid="221369237911100" type="Function">
+                            <param id="0" name="Name">&quot;EarnBadge&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="773446222099685">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="896542848161222" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;isolement&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="588588916974598" type="badge_isolement">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="533507564338911">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="575489604974976" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;racisme&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="130139243096961" type="badge_racisme">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486613322332198">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="559954964775516" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;tolerance&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="933219879556300" type="badge_tolerance">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477718869394835">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="421483362402606" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;solidarite&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="180618336446554" type="badge_solidarite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="471945591298493">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="337395081720159" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;laicite&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="920023530159852" type="badge_laicite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554367612834846">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="861084926813506" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;radicalisation&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="935952111098622" type="badge_radicalisation">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="Return" sid="303664885980016" static="0" type="number">0</variable>
+                <event-block sid="746859592001380">
+                    <conditions>
+                        <condition id="0" name="On function" sid="470205812927088" type="Function">
+                            <param id="0" name="Name">&quot;IsEarned&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="615039162953559" type="System">
+                            <param id="0" name="Variable">Return</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="882488283325727">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="579041901440488" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;isolement&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="211783473157273" type="badge_isolement">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="485060642694708" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="683487536429546">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="419395678763011" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;racisme&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="821700385795126" type="badge_racisme">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="323011929340094" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="703046700426285">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="938275396260649" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;tolerance&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="308402735693613" type="badge_tolerance">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="830163802015102" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="272633971052593">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="554483162370798" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;solidarite&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="637619562350582" type="badge_solidarite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="429582132089224" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="630366592810712">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="332762257703864" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;laicite&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="228918177983957" type="badge_laicite">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="500520818201134" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="515057800754834">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="752598792974195" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;radicalisation&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="298755825581637" type="badge_radicalisation">
+                                    <param id="0" name="Instance variable">Earned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="636601281977799" type="System">
+                                    <param id="0" name="Variable">Return</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="491158332251626">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="281115223786188" type="Function">
+                                    <param id="0" name="Value">Return</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="901401955542075">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="252403989414994" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">sac_icon</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="286491873163647" type="System">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="240178877298435">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="491650394823236" type="sac_icon">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="769220181654124" type="Function">
+                                    <param id="0" name="Name">&quot;DisplaySac&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="607477731148383">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="659970873193548" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="158750641118395" type="Function">
+                                    <param id="0" name="Name">&quot;HideSac&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

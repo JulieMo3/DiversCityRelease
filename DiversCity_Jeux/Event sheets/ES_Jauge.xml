@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Jauge</name>
+    <events>
+        <variable constant="0" name="Affiche_Jauge" sid="577857433089664" static="0" type="number">0</variable>
+        <variable constant="0" name="Jauge_Open" sid="142697205280357" static="0" type="number">0</variable>
+        <variable constant="1" name="Multiplcateur" sid="592326426742606" static="0" type="number">7.5</variable>
+        <include>ES_JaugeStats</include>
+        <event-group description='Change le &quot;Width&quot; des jauges (every Tick)' sid="674852483337592" title="Set_Width">
+            <sub-events>
+                <event-block sid="490408294434720">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="773099901058623" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="886508350828487" type="Bonheur">
+                            <param id="0" name="Width">Bonheur*MULTIPLCATEUR</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="335082273062521" type="Grande_Eclipse">
+                            <param id="0" name="Width">INFLUENCE_LAGRANDEECLIPSE*MULTIPLCATEUR</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="798947801382251" type="Iterationisme">
+                            <param id="0" name="Width">INFLUENCE_ITERATIONISME*MULTIPLCATEUR</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="274584676317780" type="Securite">
+                            <param id="0" name="Width">Securite*MULTIPLCATEUR</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="195693326453879" type="Solidarite">
+                            <param id="0" name="Width">Solidarite*MULTIPLCATEUR</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="232536557125791" type="Tolerance">
+                            <param id="0" name="Width">Tolerance*MULTIPLCATEUR</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Toutes les fonctions pour ajuster les jauges" sid="211606149737959" title="Function_Adjust_Jauge">
+            <sub-events>
+                <event-block sid="702855655143316">
+                    <conditions>
+                        <condition id="0" name="On function" sid="239370502330091" type="Function">
+                            <param id="0" name="Name">&quot;Bonheur_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="759030447033738" type="System">
+                            <param id="0" name="Variable">BONHEUR</param>
+                            <param id="1" name="Value">Bonheur+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="469637183402331">
+                    <conditions>
+                        <condition id="0" name="On function" sid="454362205186616" type="Function">
+                            <param id="0" name="Name">&quot;Grande_Eclipse_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="385431713371179" type="System">
+                            <param id="0" name="Variable">INFLUENCE_LAGRANDEECLIPSE</param>
+                            <param id="1" name="Value">INFLUENCE_LAGRANDEECLIPSE+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456383708622045">
+                    <conditions>
+                        <condition id="0" name="On function" sid="849252012943953" type="Function">
+                            <param id="0" name="Name">&quot;Iterationisme_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="547146040614935" type="System">
+                            <param id="0" name="Variable">INFLUENCE_ITERATIONISME</param>
+                            <param id="1" name="Value">INFLUENCE_ITERATIONISME+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473761369797986">
+                    <conditions>
+                        <condition id="0" name="On function" sid="746529074622668" type="Function">
+                            <param id="0" name="Name">&quot;Securite_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="421934136260325" type="System">
+                            <param id="0" name="Variable">SECURITE</param>
+                            <param id="1" name="Value">Securite+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="884166525566011">
+                    <conditions>
+                        <condition id="0" name="On function" sid="549576323149118" type="Function">
+                            <param id="0" name="Name">&quot;Solidarite_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="260890844860798" type="System">
+                            <param id="0" name="Variable">SOLIDARITE</param>
+                            <param id="1" name="Value">Solidarite+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="746361886406185">
+                    <conditions>
+                        <condition id="0" name="On function" sid="483652163025807" type="Function">
+                            <param id="0" name="Name">&quot;Tolerance_Adjust&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="961658359926299" type="System">
+                            <param id="0" name="Variable">TOLERANCE</param>
+                            <param id="1" name="Value">Tolerance+Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="241820939009702" title="Pin_jauges">
+            <sub-events>
+                <event-block sid="508291502168028">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113542017583169" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="858706957151769" type="Bonheur">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="136527301801160" type="Contour">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="491477176110839" type="Grande_Eclipse">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="385302704279015" type="Iterationisme">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="678521717592046" type="Securite">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="952047914695928" type="Solidarite">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="610797569231334" type="Tolerance">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="892271969868708" type="Text_jauges">
+                            <param id="0" name="Pin to">Plate</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="444935618230717" title="Ouverture/Fermeture">
+            <sub-events>
+                <event-group description="" sid="825344321913758" title="Function_Open/Close">
+                    <sub-events>
+                        <event-group description="" sid="901373912665472" title="Open_Jauge">
+                            <sub-events>
+                                <event-block sid="483820392926276">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="623908355426958" type="Function">
+                                            <param id="0" name="Name">&quot;Open_Jauge&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="348179286769921" type="System">
+                                            <param id="0" name="Variable">Jauge_Open</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="520515548483886" title="Close_Jauge">
+                            <sub-events>
+                                <event-block sid="672302960637691">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="361786652030911" type="Function">
+                                            <param id="0" name="Name">&quot;Close_Jauge&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="983148491110530" type="System">
+                                            <param id="0" name="Variable">Jauge_Open</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-block sid="143525804854693">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="756036908059430" type="System">
+                            <param id="0" name="Variable">Jauge_Open</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="842964783777011" type="Plate">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">430</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="598878352425682" type="Plate">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982303183398718">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="354926571006453" type="System">
+                            <param id="0" name="Variable">Jauge_Open</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="402386580434758" type="Plate">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="201480980381073" type="Plate">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="898585178620410">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="619383470957827" type="Mouse">
+                            <param id="0" name="Object">Plate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="370095157453395" type="Function">
+                            <param id="0" name="Name">&quot;Open_Jauge&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137008856018517">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="195692321704115" type="Mouse">
+                            <param id="0" name="Object">Plate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="835434868202055" type="Function">
+                            <param id="0" name="Name">&quot;Close_Jauge&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="998248081411998">
+            <conditions>
+                <condition id="0" name="On function" sid="445883575426301" type="Function">
+                    <param id="0" name="Name">&quot;Verif_Stats&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="200763574260446">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="285424824388205" type="System">
+                            <param id="0" name="Variable">BONHEUR</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="644237633381879" type="System">
+                            <param id="0" name="Variable">BONHEUR</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="381262692111243">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="596385353627511" type="System">
+                            <param id="0" name="Variable">INFLUENCE_LAGRANDEECLIPSE</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="922591088304684" type="System">
+                            <param id="0" name="Variable">INFLUENCE_LAGRANDEECLIPSE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="495814411746517">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="333119361898550" type="System">
+                            <param id="0" name="Variable">INFLUENCE_ITERATIONISME</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="161973648423164" type="System">
+                            <param id="0" name="Variable">INFLUENCE_ITERATIONISME</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888589846751757">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="694740201836620" type="System">
+                            <param id="0" name="Variable">SECURITE</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="282882756597946" type="System">
+                            <param id="0" name="Variable">SECURITE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="647951869046075">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="230733475361804" type="System">
+                            <param id="0" name="Variable">SOLIDARITE</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="134485782890233" type="System">
+                            <param id="0" name="Variable">SOLIDARITE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="437842193830990">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="563616646270886" type="System">
+                            <param id="0" name="Variable">TOLERANCE</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="223164255584396" type="System">
+                            <param id="0" name="Variable">TOLERANCE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="557595062142981">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="966790318103768" type="System">
+                            <param id="0" name="Variable">BONHEUR</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="660687615197055" type="System">
+                            <param id="0" name="Variable">BONHEUR</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="743664922934828">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="691658508271814" type="System">
+                            <param id="0" name="Variable">INFLUENCE_LAGRANDEECLIPSE</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="262376702870745" type="System">
+                            <param id="0" name="Variable">INFLUENCE_LAGRANDEECLIPSE</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241189422786512">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="400065662198332" type="System">
+                            <param id="0" name="Variable">INFLUENCE_ITERATIONISME</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="146766770463024" type="System">
+                            <param id="0" name="Variable">INFLUENCE_ITERATIONISME</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915345056137061">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="102031385516765" type="System">
+                            <param id="0" name="Variable">SECURITE</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="412143505275413" type="System">
+                            <param id="0" name="Variable">SECURITE</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="704166786566621">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="745065401332632" type="System">
+                            <param id="0" name="Variable">SOLIDARITE</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="803974971772988" type="System">
+                            <param id="0" name="Variable">SOLIDARITE</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742023931982100">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="345291468210342" type="System">
+                            <param id="0" name="Variable">TOLERANCE</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="265569523259585" type="System">
+                            <param id="0" name="Variable">TOLERANCE</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

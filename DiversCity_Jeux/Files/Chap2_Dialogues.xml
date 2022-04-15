@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding="UTF-8" ?>
+<dialog>
+	<secretaire>
+		<dial_1>Estelle : "Est-ce que tu accepterais de parler aux habitants pour savoir s'il y a des problèmes particuliers en ville ? C'est important que tout le monde se sente bien."</dial_1>
+		<dial_positive>Estelle : "Merci ! Je ferai le nécessaire pour faire remonter les informations au gouverneur."</dial_positive>
+		<dial_negative>Estelle : "Eh bien tant pis. Je pensais que tu voulais améliorer la vie à DiversCity."</dial_negative>
+		<alex_positive>Alex : "Bien sûr. Ça sera parfait pour mon documentaire."</alex_positive>
+		<alex_negative>Alex : "Ça ne sert à rien, ceux qui prennent les décisions ne les écoutent jamais."</alex_negative>
+		<appoline_positive>Appoline : "Pourquoi pas."</appoline_positive>
+		<appoline_negative>Appoline : "C'est pas mon problème, je ne suis pas assistante sociale."</appoline_negative>
+		<mai_positive>Mai : "D'accord. J'en profiterai pour prendre plein de photographies."</mai_positive>
+		<mai_negative>Mai : "Ils sont faciles à voir les problèmes, il suffit de regarder dehors."</mai_negative>
+		<nassim_positive>Nassim : "Je croise beaucoup de gens dans les associations où je suis bénévole, ça sera facile."</nassim_positive>
+		<nassim_negative>Nassim : "Bien sûr qu'il y a des problèmes ! Les associations sont débordées !"</nassim_negative>
+	</secretaire>
+	<gouverneur>
+		<dial_1>Le Gouverneur : "Prendre des décisions exige de parfois sacrifier certaines choses pour en permettre d'autres. Construire une meilleure société prend beaucoup de temps."</dial_1>
+		<dial_positive>Le Gouverneur : "C'est tout à fait vrai."</dial_positive>
+		<dial_negative>Le Gouverneur : "Ah, l'impétuosité de la jeunesse. Tu comprendras plus tard."</dial_negative>
+		<alex_positive>Alex : "Pas quand tout le monde participe. C'est pour ça que je veux être journaliste et éveiller les consciences."</alex_positive>
+		<alex_negative>Alex : "Mais plus on attend, plus les choses se dégradent et deviennent difficiles à réparer..."</alex_negative>
+		<appoline_positive>Appoline : "Et c'est quand on s'applique qu'on obtient les meilleurs résultats."</appoline_positive>
+		<appoline_negative>Appoline : "Le temps a dû se figer quelque part, alors."</appoline_negative>
+		<mai_positive>Mai : "Pour construire une meilleure société tout le monde doit mettre la main à la pâte."</mai_positive>
+		<mai_negative>Mai : "On dirait que ce sont toujours les mêmes qui doivent se sacrifier."</mai_negative>
+		<nassim_positive>Nassim : "Heureusement que certaines personnes aident les autres et y participent."</nassim_positive>
+		<nassim_negative>Nassim : "Il y a des personnes qui souffrent et qui ont déjà trop attendu."</nassim_negative>
+	</gouverneur>
+	<chef_iterationniste>
+		<dial_1>Charles : "Bonjour ! Je suis sûr que tu viens pour rejoindre la voix de la vérité et de la paix intérieure, grâce à l'harmonie des éléments naturels."</dial_1>
+		<dial_positive>Charles : "Parfait. Bienvenue parmi nous. Nous accueillons la croyance de manière large avec un esprit ouvert et j'espère que tu en feras de même. Nous offrons la possibilité de croire et d'être uni autour de cette croyance. Mais nos cœurs restent ouverts car c'est un droit personnel. A chacun sa foi et je suis heureux que tu partages le mienne."</dial_positive>
+		<dial_negative>Charles : "C'est normal de ne pas avoir encore trouvé la Lumière. N'hésite pas à venir à nos cultes, ça pourrait t'aider."</dial_negative>
+		<alex_positive>Alex : "Je suis heureux de partager avec vous cette croyance laïque."</alex_positive>
+		<alex_negative>Alex : "Je ne suis pas sûre que la vérité se trouve dans la religion."</alex_negative>
+		<appoline_positive>Appoline : "Je connais déjà la paix, mais je suis heureux de partager avec vous cette croyance laïque."</appoline_positive>
+		<appoline_negative>Appoline : "Non merci. Je n'ai pas besoin de ça."</appoline_negative>
+		<mai_positive>Mai : "J'ai toujours recherché la paix et l'harmonie dans la nature, mais jamais en moi."</mai_positive>
+		<mai_negative>Mai : "Je suis désolée, mais je ne suis pas intéresssée."</mai_negative>
+		<nassim_positive>Nassim : "Cela pourrait m'aider."</nassim_positive>
+		<nassim_negative>Nassim : "Désolé, je n'ai pas le temps pour ça."</nassim_negative>
+	</chef_iterationniste>
+	
+	<disciple_itera_1>
+		<dial_1>Marc : "La Nature est notre berceau et notre source de vie. Je pense que quand les gens seront à nouveau en harmonie avec elle, il y aura moins de conflits et d'inégalités."</dial_1>
+		<dial_positive>Marc : "Oui."</dial_positive>
+		<dial_negative> Marc : "Si tu veux, nous pourrons t'expliquer un peu plus tout ça."</dial_negative>
+		<alex_positive>Alex : "Oui. Il y a encore des tribus pacifiques qui vivent en harmonie avec la nature et elles ne sont jamais impliquées dans des guerres."</alex_positive>
+		<alex_negative>Alex : "Les premiers Humains étaient en harmonie avec la nature, et ils n'en étaient pas moins violents."</alex_negative>
+		<appoline_positive>Appoline : "C'est vrai qu'on dit souvent aux gens qui ne vont pas bien, d'aller prendre un bol d'air frais."</appoline_positive>
+		<appoline_negative>Appoline : "Je suis pas sûr que ça a un rapport."</appoline_negative>
+		<mai_positive>Mai : "Je ne me sens jamais aussi bien que quand je photographie la nature."</mai_positive>
+		<mai_negative>Mai : "Je ne suis pas sûre que ça résolve tous les problèmes."</mai_negative>
+		<nassim_positive>Nassim : "Je crois aussi que les Êtres Humains sont bons, mais ont juste perdu l'habitude de se faire confiance."</nassim_positive>
+		<nassim_negative>Nassim : "Peut-être. Mais en attendant, il y a bien trop de problèmes à gérer."</nassim_negative>
+        <last>Marc : "La Nature est notre berceau et notre source de vie. Je pense que quand les gens seront à nouveau en harmonie avec elle, il y aura moins de conflits et d'inégalités."</last>
+	</disciple_itera_1>
+
+	<disciple_itera_2>
+		<dial_1>Julia : "L'Être Humain a fait son temps. Il faut que la nature reprenne ses droits. Il faudrait déjà commencer par arrêter de soigner les maladies. Ça règlerait la surpopulation."</dial_1>
+		<dial_positive>Julia : "Les Humains doivent réapprendre leur condition de mortel et arrêter de se croire supérieurs aux autres êtres vivants."</dial_positive>
+		<dial_negative>Julia : "Les Humains causent énormément de souffrance à tous les êtres vivants, y compris eux-mêmes."</dial_negative>
+		<alex_positive>Alex : "Peut-être."</alex_positive>
+		<alex_negative>Alex : "C'est vrai que la surpopulation est un problème, mais il y a sans doute des solutions plus justes."</alex_negative>
+		<appoline_positive>Appoline : "Euh... Ok."</appoline_positive>
+		<appoline_negative>Appoline : "Pas question que j'attrape n'importe quelle maladie dégoûtante."</appoline_negative>
+		<mai_positive>Mai : "Je suis d'accord pour le respect de la nature, mais pas pour laisser des gens mourir."</mai_positive>
+		<mai_negative>Mai : "Mais on risquerait d'avoir l'effet inverse..."</mai_negative>
+		<nassim_positive>Nassim : "..."</nassim_positive>
+		<nassim_negative>Nassim : "On ne peut pas laisser les gens souffrir, c'est inhumain."</nassim_negative>
+        <last>Julia : "L'Être Humain a fait son temps. Il faut que la nature reprenne ses droits. Il faudrait déjà commencer par arrêter de soigner les maladies. Ça règlerait la surpopulation."</last>
+	</disciple_itera_2>
+
+	<chef_grande_eclipse>
+		<dial_1>Stella : "Le Soleil et la Lune jouent un rôle capital dans le cycle de la vie. Malheureusement peu de gens en ont conscience. Pourtant comprendre la Grande Eclipse permet de répondre aux grandes questions de la vie."</dial_1>
+		<dial_positive>Stella : "Bienvenue dans la Grande Eclipse. Qu'Eliseo te protège."</dial_positive>
+		<dial_negative>Stella : "Pas de soucis. Notre porte est toujours ouverte aux âmes perdues."</dial_negative>
+		<alex_positive>Alex : "Ça me semble important, en effet. Je veux bien que vous me guidiez."</alex_positive>
+		<alex_negative>Alex : "Non, merci."</alex_negative>
+		<appoline_positive>Appoline : "Je me sens vide depuis quelques temps. Je pense que c'est ça qu'il me manquait."</appoline_positive>
+		<appoline_negative>Appoline : "Je ne m'ennuie pas assez pour ça."</appoline_negative>
+		<mai_positive>Mai : "J'ai toujours senti l'influence du Soleil et de la Lune. Je veux vous rejoindre."</mai_positive>
+		<mai_negative>Mai : "Je vais y réfléchir."</mai_negative>
+		<nassim_positive>Nassim : "Il y a certaines questions que je me pose souvent. Je pense que ça pourrait m'aider."</nassim_positive>
+		<nassim_negative>Nassim : "C'est intéressant, mais je n'ai pas envie de m'impliquer dans une religion."</nassim_negative>
+	</chef_grande_eclipse>
+	<disciple_eclipse_1>
+		<dial_1>Leonard : "Il n'y a rien de plus beau que le cycle de la Lune et du Soleil. Si on se dévoue aux autres, on est heureux dans la vie suivante. La vie est un immense partage."</dial_1>
+		<dial_positive>Leonard : "Qu'Eliseo équilibre toujours ta vie."</dial_positive>
+		<dial_negative>Leonard : "Ce n'est que mon point de vue. Seul Eliseo détient la vérité."</dial_negative>
+		<alex_positive>Alex : "J'aime bien cette vision des choses."</alex_positive>
+		<alex_negative>Alex : "Mouais. Je ne suis pas certaine qu'il y ait quelque chose après la mort."</alex_negative>
+		<appoline_positive>Appoline : "C'est pas faux."</appoline_positive>
+		<appoline_negative>Appoline : "Il n'y a pas de cycle entre le soleil et la lune."</appoline_negative>
+		<mai_positive>Mai : "C'est une jolie image."</mai_positive>
+		<mai_negative>Mai : "Se dévouer aux autres c'est bien, mais il ne faut pas s'oublier soi."</mai_negative>
+		<nassim_positive>Nassim : "En tout cas on le mérite."</nassim_positive>
+		<nassim_negative>Nassim : "Si la vie et la mort font vraiment partie d'un cycle, pourquoi ne peut-on pas se souvenir de ses erreurs et changer dans notre nouvelle vie ?"</nassim_negative>
+        <last>Leonard : "Il n'y a rien de plus beau que le cycle de la Lune et du Soleil. Si on se dévoue aux autres, on est heureux dans la vie suivante. La vie est un immense partage."</last>
+	</disciple_eclipse_1>
+	<disciple_eclipse_2>
+		<dial_1>Luna : "Les gens se sont déréglés et ont troublé le cycle vital. On ne dort plus la nuit et on perturbe le sommeil des autres. C'est inadmissible, il faut en finir avec ce genre de personne égoïste."</dial_1>
+		<dial_positive>Luna : "J'espère que la Grande Marée lavera les péchés des gens."</dial_positive>
+		<dial_negative>Luna : "Ceux qui refusent la Grande Eclipse nuisent à l'harmonie de toute la planète."</dial_negative>
+		<alex_positive>Alex : "Il faudrait rééduquer les gens au respect des autres, en commançant par une prise de conscience, peut-être ?"</alex_positive>
+		<alex_negative>Alex : "Ce n'est que votre point de vue. Il faut aussi respecter ceux qui ne croient pas en votre religion."</alex_negative>
+		<appoline_positive>Appoline : "C'est vrai qu'empêcher les autres de dormir est vraiment insupportable."</appoline_positive>
+		<appoline_negative>Appoline : "Ce n'est pas parce que je ne dors pas la nuit que je suis égoïste, je ne dérange personne."</appoline_negative>
+		<mai_positive>Mai : "C'est vrai que le manque de sommeil peut expliquer l'agressivité de certaines personnes."</mai_positive>
+		<mai_negative>Mai : "La religion ne fait pas office de loi. Et on peut la respecter sans suivre ses principes, sans pour autant avoir un comportement égoïste."</mai_negative>
+		<nassim_positive>Nassim : "La religion peut parfois être un guide moral puissant."</nassim_positive>
+		<nassim_negative>Nassim : "En finir ? Il ne suffirait pas juste de dialoguer ? Ou au pire établir des lois."</nassim_negative>
+        <last>Luna : "Les gens se sont déréglés et ont troublé le cycle vital. On ne dort plus la nuit et on perturbe le sommeil des autres. C'est inadmissible, il faut en finir avec ce genre de personne égoïste."</last>
+	</disciple_eclipse_2>
+	<citoyenne>
+		<dial_1>Charlotte : "Le bien être de tous dépend de la bonne volonté de chacun. Si tu fais des efforts pour que tout aille bien dans la ville, ça aura des répercussions positives."</dial_1>
+		<dial_positive>Charlotte : "C'est bien."</dial_positive>
+		<dial_negative>Charlotte : "Tout le monde doit faire des efforts pour que DiversCity reste une ville agréable."</dial_negative>
+		<alex_positive>Alex : "Je voudrais faire un reportage sur ce qui ne va pas à DiversCity. J'espère que ça fera réagir les gens dans le bon sens."</alex_positive>
+		<alex_negative>Alex : "Ouais, mais si je suis la seule à le faire, c'est pas cool."</alex_negative>
+		<appoline_positive>Appoline : "Je suis toujours très polie et respectueuse."</appoline_positive>
+		<appoline_negative>Appoline : "Perso, j'ai rien à me reprocher."</appoline_negative>
+		<mai_positive>Mai : "J'essaye toujours d'avoir le meilleur comportement possible. Mais j'ai hâte de pouvoir voter pour être une citoyenne plus active."</mai_positive>
+		<mai_negative>Mai : "Oui, mais à quelle échelle ? Je ne peux pas tout changer toute seule."</mai_negative>
+		<nassim_positive>Nassim : "Je suis bénévole dans plusieurs associations. J'essaye toujours d'aider un maximum de gens."</nassim_positive>
+		<nassim_negative>Nassim : "Il faudrait dire ça aux adultes qui se comportent n'importe comment."</nassim_negative>
+	</citoyenne>
+	<chomeuse>
+		<dial_1>Tamara : "J'ai écumé toutes les offres d'emploi, mais il n'y a jamais rien qui convient."</dial_1>
+		<dial_positive>Tamara : "Merci."</dial_positive>
+		<dial_negative>Tamara : "J'ai envoyé énormément de candidatures, dans plein de domaines différents, mais je ne reçois jamais de réponse."</dial_negative>
+		<alex_positive>Alex : "Vous voulez que je vous fasse un CV vidéo ? Ça m'entrainerait et ça peut faire bonne impression, non ?"</alex_positive>
+		<alex_negative>Alex : "Parfois il faut accepter des boulots difficiles et qui ne vous plaisent pas forcément."</alex_negative>
+		<appoline_positive>Appoline : "Vous avez essayé de passer une formation ? Il y en a peut-être qui vous intéresseraient ?"</appoline_positive>
+		<appoline_negative>Appoline : "Si vos études ne vous permettent pas de trouver du boulot c'est que vous n'avez pas assez étudié."</appoline_negative>
+		<mai_positive>Mai : "Mes parents sont restaurateurs. Je peux essayer de voir s'ils ont besoin de quelqu'un, si ça vous intéresse."</mai_positive>
+		<mai_negative>Mai : "Vous avez postulé même aux petits boulots ?"</mai_negative>
+		<nassim_positive>Nassim : "Si vous voulez, vous pouvez venir faire du bénévolat avec moi. Ça doit être positif à montrer à un recruteur."</nassim_positive>
+		<nassim_negative>Nassim : "Si vous ne trouvez rien dans votre domaine, c'est peut-être parce que c'est pas un métier très utile."</nassim_negative>
+	</chomeuse>
+	<!--<sdf>
+		<dial_1>Patrick : "Bonjour, est-ce que tu aurais un peu de nourriture ou de l'eau s'il-te-plaît ?"</dial_1>
+		<dial_positive>Patrick : "Merci beaucoup, passe une bonne journée."</dial_positive>
+		<dial_negative>Patrick : "D'accord. Merci quand même."</dial_negative>
+		<alex_positive>Alex : "J'ai du jus de fruit, si vous voulez."</alex_positive>
+		<alex_negative>Alex : "Je repasserai plus tard."</alex_negative>
+		<appoline_positive>Appoline : "Vous pouvez aller voir les associations ou une assistante sociale. Tenez, prenez ça si vous avez faim."</appoline_positive>
+		<appoline_negative>Appoline : "Désolée, je ne peux rien faire pour vous."</appoline_negative>
+		<mai_positive>Mai : "Vous pouvez aller voir les associations ou une assistante sociale. Tenez, prenez ça si vous avez faim."</mai_positive>
+		<mai_negative>Mai : "J'aimerais pouvoir vous aider, désolée."</mai_negative>
+		<nassim_positive>Nassim : "Tenez, voici l'adresse d'une des associations où je fais du bénévolat, les membres seront heureux de vous aider."</nassim_positive>
+		<nassim_negative>Nassim : "Vous pouvez vous adresser aux associations, je n'ai pas le temps de vous aider maintenant."</nassim_negative>
+	</sdf>-->
+	<raciste>
+		<dial_1>Enzo : "Le mec qui tient le restaurant chinois a un sacré problème. Il refuse de me servir et m'a même insulté une fois. Tu devrais en parler à tes parents qu'ils se méfient."</dial_1>
+		<dial_positive>Enzo : "T'as bien raison."</dial_positive>
+		<dial_negative>Enzo : "Allez, barre-toi."</dial_negative>
+		<alex_positive>Alex : "Je ferai sans doute une enquête dessus pour mon documentaire sur les incivilités à DiversCity."</alex_positive>
+		<alex_negative>Alex : "Je vais d'abord lui demander pourquoi il fait ça."</alex_negative>
+		<appoline_positive>Appoline : "On ne va pas dans ce genre de restaurant de toutes façons."</appoline_positive>
+		<appoline_negative>Appoline : "Mes parents sont assez grands pour se faire leur propre avis."</appoline_negative>
+		<mai_positive>Mai : "Non pas du tout ! Je ne le connais pas."</mai_positive>
+		<mai_negative>Mai : "Non, mais je ne suis pas une "chintok" et lui non plus."</mai_negative>
+		<nassim_positive>Nassim : "J'en parlerai autour de moi."</nassim_positive>
+		<nassim_negative>Nassim : "Je vais aussi vérifier que ce n'est pas de vous qu'ils devraient se méfier."</nassim_negative>
+        <last>Enzo : "Allez, barre-toi."</last>
+	</raciste>
+	<victime_raciste>
+		<dial_1>Charlie : "Cet homme est venu dans mon restaurant en se faisant passer pour un client et a fini par faire un scandale et casser de la vaisselle sans jamais expliquer pourquoi..."</dial_1>
+		<dial_positive>Charlie : "Je vais aller le signaler, je ne voudrais pas qu'il s'en prenne à d'autres personnes."</dial_positive>
+		<dial_negative>Charlie : "Bon... Eh bien bonne journée alors."</dial_negative>
+		<alex_positive>Alex : "C'est bien ce que je pensais. Je parlerai de ce genre de comportement dans mon documentaire."</alex_positive>
+		<alex_negative>Alex : "On déclenche rarement un scandale pour rien."</alex_negative>
+		<appoline_positive>Appoline : "Ah, je comprends mieux. Il y a vraiment des gens qui n'ont aucun respect."</appoline_positive>
+		<appoline_negative>Appoline : "Peut-être parce que vous avez refusé de le servir ?"</appoline_negative>
+		<mai_positive>Mai : "Il a été très malpoli avec moi. J'ai été adoptée, mais je ne connais pas grand-chose de mon pays d'origine."</mai_positive>
+		<mai_negative>Mai : "Bah non, mes parents sont nés ici. Je suis une citoyenne de DiversCity."</mai_negative>
+		<nassim_positive>Nassim : "Vous ne devriez pas hésiter à en parler à la police ou la mairie, si ce n'est pas déjà fait."</nassim_positive>
+		<nassim_negative>Nassim : "Ce n'est pas une raison pour l'insulter et refuser d'écouter ce qu'il a à dire."</nassim_negative>
+	<second>
+		<dial_1>Charlie : "Que viens-tu faire ici ?! Je t'ai déjà dit que je ne voulais plus te voir dans mon restaurant."</dial_1>
+		<dial_2>Enzo : "On m'a dit de venir, c'est une blague ?"</dial_2>
+		<dial_3>"C'est moi qui lui ai dit de venir. Ce conflit a sans doute une explication, vu que selon chacun de vous le manque de respect vient de l'autre. J'aimerai juste avoir vos points de vue afin de calmer la situation."</dial_3>
+		<dial_4>Charlie : "Je vous l'ai dit, cet homme est venu dans mon restaurant et a cassé des assiettes sans aucune raison."</dial_4>
+		<dial_5>Enzo : "Vous oubliez un morceau de l'histoire. Je me suis assis pour manger, en effet, et vous m'avez dévisagé puis avez fait exprès de me servir en dernier. Alors oui je me suis énervé !"</dial_5>	
+		<dial_6>Charlie : "Absolument pas. Je regardais vos baskets que je trouvais sympa pour mon fils. Et je n'ai jamais reçu votre commande une erreur a dû se produire entre le serveur et la cuisine."</dial_6>
+		<dial_7>"Vous voyez ce n'est qu'un malentendu. Aucun de vous n'êtes raciste vous avez juste mal interprété la situation."</dial_7>
+		<dial_8>Enzo : "Je m'excuse de m'être emporté. J'aurai dû en discuter et ne pas juger sur des a priori. Ça peut arriver d'être parano."</dial_8>
+		<dial_9>Charlie : "Je m'excuse aussi. Revenez quand vous voulez je vous offre un plat !"</dial_9>
+	</second>	
+        <last> Charlie : "Passe bonne journée !."</last>
+	</victime_raciste>
+	<pas_tolerant>
+		<dial_1>Amine : "Regarde-moi le look de cette nana, ça ne ressemble à rien et ça voudrait changer le monde. Ça n'a rien dans le crâne les gens comme ça."</dial_1>
+		<dial_positive>Amine : "Evite de devenir comme ça toi aussi."</dial_positive>
+		<dial_negative>Amine : "Dégage ou je t'en colle une."</dial_negative>
+		<alex_positive>Alex : "C'est vrai qu'elle a un look qui ne passerait pas à la caméra."</alex_positive>
+		<alex_negative>Alex : "Vous lui avez déjà parlé, au moins, avant de dire ça ?"</alex_negative>
+		<appoline_positive>Appoline : "Oui. Quelqu'un d'intelligent saurait que l'apparence doit se cultiver autant que le reste."</appoline_positive>
+		<appoline_negative>Appoline : "Elle vous a fait quelque chose ? Si vous ne supportez pas les gens différents, vous pouvez toujours regarder ailleurs."</appoline_negative>
+		<mai_positive>Mai : "Je ne sais pas quoi en penser. Vous avez sans doute raison."</mai_positive>
+		<mai_negative>Mai : "Les gens qui jugent sur les apparences causent toujours du tort aux autres."</mai_negative>
+		<nassim_positive>Nassim : "Chacun a le droit d'exprimer sa personnalité comme il veut, après tout."</nassim_positive>
+		<nassim_negative>Nassim : "C'est vous qui ne devez pas être très intelligent pour dire des choses pareilles."</nassim_negative>
+        <last>Amine : "Peut-être que j'ai mal juger cette parsonne... "</last>
+	</pas_tolerant>
+	<victime_tolerance>
+		<dial_1>Claire : "ll y a un homme qui passe son temps à venir m'insulter. J'essaye juste d'inspirer les gens à travers l'art en leur proposant de participer aussi."</dial_1>
+		<dial_positive>Claire : "Viens me voir quand tu veux. Tu pourras même participer, si ça te dit."</dial_positive>
+		<dial_negative>Claire : "Personne n'est obligé d'apprécier ma démarche artistique, mais je ne fais rien de mal. C'est même plutôt l'inverse."</dial_negative>
+		<alex_positive>Alex : "C'est super ! Est-ce que je pourrais vous filmer pour un documentaire sur la ville ?"</alex_positive>
+		<alex_negative>Alex : "Pourquoi ne pas lire les livres dans des espaces dédiés, au lieu d'occuper l'espace public ?"</alex_negative>
+		<appoline_positive>Appoline : "Il y a toujours des gens pour insulter. Il ferait mieux de se regarder."</appoline_positive>
+		<appoline_negative>Appoline : "Vous ne faites pas ça juste pour attirer l'attention ?"</appoline_negative>
+		<mai_positive>Mai : "Vous rendez des personnes heureuses en faisant des choses bien, c'est le plus important."</mai_positive>
+		<mai_negative>Mai : "Peut-être que vous avez fait quelque chose qui l'a dérangé ?"</mai_negative>
+		<nassim_positive>Nassim : "Vous donnez de votre temps pour améliorer la vie à DiversCity, c'est cool."</nassim_positive>
+		<nassim_negative>Nassim : "Vous pourriez être bénévole dans une association, ça serait plus utile."</nassim_negative>
+        <last> Claire : "Merci ! maintenant je subis plus d'insulte."</last>
+	</victime_tolerance>
+	<pas_solidaire>
+		<first>
+			<dial_1>Eleonore : "Ah! Franchement j’en ai marre de ces sdf qui traine en bas de chez moi, c’est insupportable, toujours là à mendier de l’argent!"</dial_1>
+			<dial_2> "Vous savez, ils n’ont pas choisi d’être dans cette situation et ne demandent pas tous de l’argent! Beaucoup sont gênés et demandent juste à survivre comme avoir à boire ou à manger!"</dial_2>
+			<dial_3>Eleonore : "Oui bien sûr! Et puis le lendemain je me retrouve avec 10 personnes devant ma porte, je ne suis pas mère Teresa."</dial_3>
+		</first>
+		<second>
+			<dial_1>Eleonore : "Ça ne sert à rien d’insister, vous ne me ferez pas changer d’avis!"</dial_1>
+		</second>
+		<bottle>
+			<dial_1>Eleonore : "Je vous ai vu aider ce sans abri… Je m’en veux de ne pas l’avoir aidé alors que c’était si simple, cette petite action a apporté tellement de joie à cet homme qui n’a rien demandé de plus. Je vous remercie, vous m’avez ouvert les yeux. A partir d’aujourd’hui je vais essayer de plus aider mon prochain."</dial_1>
+		</bottle>
+	</pas_solidaire>
+	<sdf>
+		<first>
+			<dial_1>Patrick : "Bonjour … Excusez-moi de vous déranger, auriez-vous à boire… ? Ca fait plusieurs heures que j’essaye désespérément d’avoir à boire, mais toutes les personnes que je croise m’ignorent ou n’ont pas le temps…"</dial_1>
+			<dial_2> : "Non, désolé… Je n’ai pas d’eau sur moi, mais je vais essayer de vous en apporter dès que je peux!"</dial_2>
+			<dial_3>Patrick : "Merci de m'aider."</dial_3>
+		</first>
+		<second>
+			<dial_1>Patrick : "Prenez votre temps, c’est déjà très gentil de votre part de vous occuper de moi"</dial_1>
+		</second>
+		<bottle>
+			<dial_1>Patrick : "Merci beaucoup! J’avais terriblement soif!"</dial_1>
+			<dial_2> : "Ce n’est pas grand chose, j’ai juste aidé quelqu’un dans le besoin."</dial_2>
+			<dial_3>Patrick : "Peut-être que pour vous ce n’est rien, mais vous avez fait beaucoup pour moi ! Sur ce je vous laisse et je vais essayer d’avancer dans la vie. Je vous suis très reconnaissant. Passez une bonne journée."</dial_3>
+		</bottle>
+        <last>>Patrick : "Merci beaucoup! J’avais terriblement soif!"</last>
+	</sdf>
+	<kevin>
+		<first>Kévin : "Laisse-moi tranquille, je ne veux pas te parler."</first>
+		<second>Kévin : "Je te dis que je n'ai pas envie de te parler."</second>
+		<friends>
+			<dial_1>Amis de Kévin : "Kévin, on s'inquiète pour toi. On voudrait que tu ailles mieux!"</dial_1>
+			<dial_2>Kévin : "Je veux rester seul."</dial_2>
+			<dial_3>Amis de Kévin : "Mais non, viens jouer avec nous. On va bien s'amuser. Ne reste pas seul, s'il te plaît!"</dial_3>
+			<dial_4>Kévin : "Bon… Ok. Je veux bien venir jouer avec vous."</dial_4>
+		</friends>
+		<last>Kévin : "Je suis content de pouvoir jouer avec mes amis au foot, finalement."</last>
+	</kevin>
+	<parent_kevin>
+		<first>Parents de Kévin : "Nous sommes inquiets pour notre fils. Il s'isole et ne veut plus parler aux autres."</first>
+		<second>Parents de Kévin : "Chaque jour nous essayons de l'aider à s'ouvrir aux autres, mais il préfère rester seul."</second>
+		<last>Parents de Kévin : "Nous avons enfin retrouvé notre fils! Il est à nouveau heureux!"</last>
+	</parent_kevin>
+	<ami_kevin>
+		<first>Amis de Kévin : "Kévin ne veut plus jouer avec nous. On s'inquiète pour lui."</first>
+		<second>Amis de Kévin : "Allons voir Kévin, il ne peut pas rester comme ça, faisons quelque chose pour l'aider!"</second>
+		<last>Amis de Kévin : "Youpii! On peut tous jouer ensemble!"</last>
+	</ami_kevin>
+	<mere_alex>
+		<dial_alex>Maman d'Alex : "Comment va Apolline ? Ça fait longtemps qu'elle n'est pas passée à la maison."</dial_alex>
+		<dial_appoline>Maman d'Alex : "Alex est très concentrée sur son documentaire. Mais ça ne vous empêche pas de sortir toutes les deux, au contraire."</dial_appoline>
+		<dial_1>Maman d'Alex : "Passer une partie de ses journées chez d'autres personnes et les aider permet de partager de bons moments, et de découvrir plein d'histoires intéressantes."</dial_1>
+	</mere_alex>
+	<mere_appoline>
+		<dial_alex>Maman d'Appoline : "J'espère qu'Apolline et toi profitez de votre temps libre pour réviser aussi. C'est important pour votre avenir."</dial_alex>
+		<dial_appoline>Maman d'Appoline : "DiversCity est un endroit calme, loin du stress des grandes villes. Mais ce n'est pas une raison pour se laisser aller. Ce n'est qu'en travaillant que tu auras ce que tu veux."</dial_appoline>
+		<dial_1>Maman d'Appoline : "Pouvoir scolariser ses enfants dans une bonne école est important. C'est là où se construit la base d'un bon avenir."</dial_1>
+	</mere_appoline>
+	<pere_appoline>
+		<dial_alex>Papa d'Appoline : "C'est bien d'avoir de l'ambition, mais le journalisme est très sélectif. Il faut travailler dur pour atteindre des fonctions telles que présentatrice à la télévision."</dial_alex>
+		<dial_appoline>Papa d'Appoline : "Tu devrais profiter de ton temps libre pour réviser tes cours. Quand tu auras un travail décent, tu pourras avoir le passe-temps que tu veux."</dial_appoline>
+		<dial_1>Papa d'Appoline : "Quand je vois certaines affaires qui passent au tribunal, je suis bien content d'avoir travaillé dur pour avoir les moyens de vivre dans un quartier décent."</dial_1>
+	</pere_appoline>
+	<mere_mai>
+		<dial_mai>Maman de Mai : "Tes photographies sont très jolies, on pourrait en afficher dans le restaurant, si tu veux."</dial_mai>
+		<dial_nassim>Maman de Mai : "Maï adore la photographie. Elle trouve toujours un nouveau coin de la ville à explorer. C'est dommage que certains endroits ne soient pas mieux entretenus."</dial_nassim>
+		<dial_1>Maman de Mai : "On a eu quelques grafitis sur nos murs récemment, au moins ça a permis de refaire la peinture et donner un coup de neuf au restaurant."</dial_1>
+	</mere_mai>
+	<pere_mai>
+		<dial_mai>Papa de Mai : "Nassim a l'air très impliqué dans le bénévolat, j'espère qu'il garde quand même un peu de temps pour lui."</dial_mai>
+		<dial_nassim>Papa de Mai : "N'hésite pas à demander à Maï de t'accompagner à tes activités bénévoles, je suis sûr qu'elle pourrait mettre sa passion à profit."</dial_nassim>
+		<dial_1>Papa de Mai : "DiversCity est une ville agréable, mais de plus en plus de clients oublient de laisser un pourboire."</dial_1>
+	</pere_mai>
+	<mere_nassim>
+		<dial_mai>Maman de Nassim : "Nassim est très pris par ses devoirs et le bénévolat."</dial_mai>
+		<dial_nassim>Maman de Nassim : "Ça fait un moment que je n'ai pas vu Maï, vous passez toujours du temps ensemble ?"</dial_nassim>
+		<dial_1>Maman de Nassim : "Notre fils est très studieux et généreux. Je suis fière de lui."</dial_1>
+	</mere_nassim>
+	<pere_nassim>
+		<dial_mai>Papa de Nassim : "Je suis content que Nassim soit aussi généreux. J'espère juste qu'il est aussi attentif à ses propres besoins."</dial_mai>
+		<dial_nassim>Papa de Nassim : "C'est bien que tu aides les autres, mais n'oublie pas de t'occuper de toi aussi."</dial_nassim>
+		<dial_1>Papa de Nassim : "Il y a de moins en moins de gens qui viennent à la bibliothèque. C'est dommage que tout le monde ne puisse pas profiter d'un accès gratuit à la culture."</dial_1>
+	</pere_nassim>
+	<educateur>
+		<dial_1>M. Lafitte : "Ça fait longtemps qu'on n'a pas eu à se voir. Tu as l'air en forme, c'est cool."</dial_1>
+		<dial_2>M. Lafitte : "Si tu as besoin de discuter, n'hésite pas à venir me voir."</dial_2>
+	</educateur>
+	<cpe>
+		<dial_1>M. Felch : "Salut, tout se passe bien pour toi ?"</dial_1>
+		<dial_2>M. Felch : "Parfois les élèves ont juste besoin qu'on les écoute. Mais ça n'excuse pas tout."</dial_2>
+	</cpe>
+	<policier>
+		<dial_1>Chef Maleh : "Nous manquons d'effectifs pour garder les immeubles la nuit et accueillir les gens au poste de police."</dial_1>
+		<dial_2>Chef Maleh : "Notre métier nous demande de protéger les gens des autres, mais aussi parfois d'eux-mêmes."</dial_2>
+	</policier>
+	<assistante_sociale>
+		<dial_1>Mme Basri : "Bonjour. Si tu as besoin de quoi que ce soit, je suis là pour toi."</dial_1>
+		<dial_2>Mme Basri : "Être assistante sociale est parfois difficile : on ne peut pas toujours aider les gens comme on le voudrait. Heureusement il y a aussi des fins joyeuses."</dial_2>
+		<dial_3>Mme Basri : "Mon but est d'aider, accompagner les personnes qui sont dans le besoin : tant financier, que sociale, que familial, et toujours avec toi. "</dial_3>
+	</assistante_sociale>
+	<garde_1>
+		<dial_1>Agent Nicolas : "Montre-moi le contenu de ton sac, s'il-te-plaît."</dial_1>
+		<dial_2>Agent Nicolas : "Pas de grabuge ici, hein ?"</dial_2>
+	</garde_1>
+	<garde_2>
+		<dial_1>Agent Alia : "Bonjour, si tout est ok avec mon collègue, tu peux y aller."</dial_1>
+		<dial_2>Agent Alia : "Bonne journée."</dial_2>
+	</garde_2>
+	<personne_positive>
+		<dial_1>Emilio : "DiversCity est une si belle ville, tu ne trouves pas ?"</dial_1>
+		<dial_2>Emilio : "Les gens ont tendance à ne retenir que le négatif, mais regarde la chance qu'on a de vivre dans cette ville !"</dial_2>
+	</personne_positive>
+	<personne_negative>
+		<dial_1>Eric : "Je ne me sens pas en sécurité quand je sors de chez moi, ce qui m'attriste c'est que ça n'a pas toujours été le cas."</dial_1>
+		<dial_2>Eric : "Ça fait un moment que je songe à partir d'ici. J'ai déjà commencé les démarches."</dial_2>
+	</personne_negative>
+	<alex>
+		<dial_1>Alex : "Je pense faire un documentaire sur l'évolution de la ville, grâce aux histoires de mon grand-père. Je pourrais même le proposer pour le concours d'entrée en école de journalisme. C'est une bonne idée, nan ?"</dial_1>
+		<dial_appoline>Alex : "J'espère que mon documentaire aidera à changer les choses ici. Si je suis prise en école de journalisme, il pourra avoir une plus grande portée, en plus."</dial_appoline>
+	</alex>
+	<!-- appoline -->
+	<appoline>
+		<dial_1>Appoline : "J'en ai assez d'être coincée dans cette ville. Même mon magasin préféré est parti ailleurs."</dial_1>
+		<dial_alex>Appoline : "Je m'ennuie ici. J'ai envie de partir dans une meilleure ville et rencontrer des gens plus intéressants."</dial_alex>
+	</appoline>
+	<!-- alex -->
+	<mai>
+		<dial_1>Mai : "DiversCity n'est plus aussi joyeuse qu'avant. En tout cas c'est l'impression que j'ai quand je compare toutes les photos que j'ai prises."</dial_1>
+		<dial_nassim>Mai : "Ce qu'il se passe en ce moment me rend triste. J'ai envie de voyager et rencontrer de nouvelles personnes. Photographier de nouveaux endroits et m'y sentir bien."</dial_nassim>
+	</mai>
+	<nassim>
+		<dial_1>Nassim : "C'est dur de motiver les gens à aider les autres, ces temps-ci. Les associations ont du mal à trouver des bénévoles."</dial_1>
+		<dial_mai>Nassim : "Il y a tellement de gens à aider, mais personne pour le faire. Les associations sont débordées..."</dial_mai>
+	</nassim>
+	<end_dialog>Chef Maleh : "Ah te revoila ? Je sens que notre ville évolue depuis ton arrivée. C’est intéressant de rencontrer une telle diversité d’opinion."</end_dialog>
+	<all_badge_dialog>Chef Maleh : "Félicitations, tu as obtenu tout les badges!"</all_badge_dialog>
+</dialog>

@@ -1,0 +1,566 @@
+<Dialogue>
+
+	<question1>Dis moi, lorsqu’une personne de notre entourage s’isole, vaut-il mieux la laisser tranquille ?</question1>
+
+	<question2>Faire partie d’une religion signifie-t-il obligatoirement que l'on se radicalise ?</question2>
+
+	<question3>Le racisme concerne-t-il tout le monde, et pas juste une couleur en particulier ?</question3>
+
+	<question4>Avoir une opinion ou une croyance différente ne signifie pas que l’un à tort ou l’autre a raison ?</question4>
+
+	<explication_question1>Tu penses...? Lorsqu'une personne s'isole, plus elle est seul, plus elle se conforte dans cette solitude. Il est important d'intervenir et de chercher des solution ensemble pour sortir de cette spirale infernal.</explication_question1>
+	<explication_question2>Je ne suis pas radicalisée et pourtant croyant haha. La croyance est personnel et se partage avec dans les lieux de cultes, elle reste ouverte mais ne s'impose pas.</explication_question2>
+	<explication_question3>Tu ne te sans pas concerné ? Rejeter une race enjendre isolement et haine. Comme tu as pu le voir dans la ville cela n'a porte rien de bon, il est important que tout le monde se sente égaux, cela concerne tout le monde.</explication_question3>
+	<explication_question4>Je n'est pas la même croyance que toi pourtant. La religion est une liberté de choix et la tien ne devrait pas empiéter sur celle des autre. </explication_question4>
+
+	<bonne_reponse>Tu as raison.</bonne_reponse>
+	<mauvaise_reponse>Je ne suis pas vraiment d'accord...</mauvaise_reponse>
+
+	<fin_alex>
+		<dial1>Alex : "Mai ! Qu’est-ce que tu fais ?"</dial1>
+		<dial2>Mai : "Tu ne peux pas comprendre."</dial2>
+		<first_choice>
+			<positive>Ah oui !?</positive>
+			<negative>C’est vrai.</negative>
+			<positive_answer>
+				<dial1>Alex : "Ah oui !? Tu crois ça ! je comprends très bien. Je vois mon amie faire une bêtise énorme. On se connait depuis tout petit, explique-moi et ose me dire que je ne comprends pas !"</dial1>
+				<dial2>Mai : "Tu es fidèle à toi-même, tu ne mâche pas tes mots. Pour la peine je vais t’expliquer, comme tu le sais, je ne suis pas originaire d’ici et pourtant, je ne connais que cette ville. Ça fait mal de se faire rejeter par les siens, on se sent isolé… puis un jour tu rencontres des gens qui t’accepte et qui veulent la même chose que toi, la paix."</dial2>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Alex : "Tu as raison, je ne comprends pas… je ne comprends comment une personne avec qui j’ai grandi a pu en arriver là, alors explique moi, s’il te plait."</dial1>
+				<dial2>Mai : "Tu as toujours été quelqu’un de réfléchi et d’honnête. Pour la peine je vais t’expliquer, comme tu le sais, je ne suis pas originaire d’ici et pourtant, je ne connais que cette ville. Ça fait mal de se faire rejeter par les siens, on se sent isoler… puis un jour tu rencontres des gens qui t’accepte et qui veulent la même chose que toi, la paix."</dial2>
+			</negative_answer>
+		</first_choice>
+		<second_choice>
+			<positive>Imbécile !</positive>
+			<negative>Je vois.</negative>
+			<positive_answer>
+				<dial1>Alex : "Je n’arrive pas à croire, ce que je viens d’entendre ! Et le pire c’est que tu es sérieuse !! Que je sache, nous tes proches, ta famille, tes amis, on ne t’a jamais rejeté ! Et en plus, tu ne nous en a jamais parlé, on aurait pu t’aider ! On aurait trouvé une autre solution !"</dial1>
+				<dial2>Mai : "!?!?"</dial2>
+				<dial3>Alex : "Alors, s’il te plait, rentre avec nous, on va arranger les choses, je te le promets."</dial3>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Alex : "C’est difficile à dire mais je crois que j’aurais pu faire la même chose. J’essaie de me mettre à ta place mais c’est un peu compliqué, pour des raisons qui sont évidentes, tu le vois bien…"</dial1>
+				<dial2>Mai : "…"</dial2>
+				<dial3>Alex : "Mais, s’il te plait, rentre avec nous. En l'honneur de notre amitié."</dial3>
+			</negative_answer>
+		</second_choice>
+	</fin_alex>
+	
+	<fin_mai>
+		<dial1>Mai : "Alex, arrêtes s’il te plait !!"</dial1>
+		<dial2>Alex : "Arrêter ? Pourquoi faire ? Peux-tu seulement comprendre ma motivation ?"</dial2>
+		<first_choice>
+			<positive>Je demande que ça. </positive>
+			<negative>Je ne comprends rien.</negative>
+			<positive_answer>
+				<dial1>Mai : "Je suis ton amie, je ne demande que ça, je veux savoir comment quelqu’un qui est à l’aise avec les gens et qui réfléchit 36 fois avant d‘agir a pu s’isoler et en arriver là."</dial1>
+				<dial2>Alex : "Tu viens de répondre à la question toute seule ma chère amie. A force de parler avec les gens et d’observer notre ville, j’ai remarqué l’origine des conflits à l’extrême et leur fermeture d’esprit. J’ai réfléchi comment trouver la solution et j’ai trouvé des gens qui avait le même objectif que moi, ils m’ont permis de trouver la solution."</dial2>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Mai : "Je ne comprends pas ce qui se passe… je ne comprends comment une personne qui ne subit pas de discrimination de la société et qui préfère discuter quand il y a un problème, a pu se dire que c’était une bonne solution."</dial1>
+				<dial2>Alex : "Justement, j’ai pu voir toutes les formes d’injustice sous un regard neutre. J’ai discuté ces être discriminant, mais ils ne veulent rien entendre, ça ne sert à rien avec eux, seul les actions sont la solution !"</dial2>
+			</negative_answer>
+		</first_choice>
+		<second_choice>
+			<positive>Ce que tu dis n’a aucun sens ! </positive>
+			<negative>Je ne comprends pas.</negative>
+			<positive_answer>
+				<dial1>Mai : "Tu veux régler les conflits par des conflits ? C’est comme ça que le cycle de la haine survivra. Tu ne feras que rejoindre ceux que tu veux combattre. Ta croyance en cette idée fera de toi quelqu’un de plus horrible qu’eux."</dial1>
+				<dial2>Alex : "… Je …</dial2>
+				<dial3>Mai : "Reviens vers nous, mon ami."</dial3>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Mai : "J’ai toujours ignoré les remarques qu’on faisait sur mes origines alors que j’ai toujours vécu ici. J’ai toujours voulu régler les problèmes dans la paix et en discutant. Mais peut-être que tu as raison…"</dial1>
+				<dial2>Alex : *soufflement de nez* </dial2>
+				<dial3>Mai : "Est-ce vraiment la seule solution ?..."</dial3>
+			</negative_answer>
+		</second_choice>
+	</fin_mai>
+
+	<fin_appoline>
+		<dial1>Appoline : "Nassim, je peux savoir ce que tu fais !?</dial1>
+		<dial2>Nassim : "Ce que je fais ? C’est simple. J’apporte la paix mais ça, tu ne connais pas !</dial2>
+		<first_choice>
+			<positive>Ah oui !? </positive>
+			<negative>Tu as raison. </negative>
+			<positive_answer>
+				<dial1>Appoline : "Je suis très curieuse de savoir comment tu vas apporter la paix en usant de la violence. C’est vrai que ça ira mieux après !! Hein ?!"</dial1>
+				<dial2>Nassim : "Tu n’y vas pas avec le dos de la cuillère. Mais je trouve que tu es mal placée pour dire ça. Tu n’as que des avis tranchés et tu es assez violente dans ta façon de parler. Mais passons, il n’y a pas que ça, je pense que tu peux comprendre que toi et moi, on est victime de discrimination à cause de notre couleur, et à force d’en subir, j’ai commencé à me sentir mal. Puis j’ai rencontré de gens qui étaient dans la même situation et ils m’ont aidé, je partage leurs points de vue."</dial2>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Appoline : "Toi qui es une personne bienveillante et gentille, qui ne ferai pas de mal à une mouche, veux apporter la paix par la violence? Je ne connais pas."</dial1>
+				<dial2>Nassim : "Le monde Change et moi avec. Mais je trouve que tu es mal placée pour dire ça. Tu n’as que des avis tranché et tu es assez violente dans ta façon de parler. Mais passons, il n’y a pas que ça, je pense que tu peux comprendre que toi et moi, on est victime de discrimination à cause de notre couleur, et à force d’en subir, j’ai commencé à me sentir mal. Puis j’ai rencontré de gens qui étaient dans la même situation et ils m’ont aidé, je partage leurs points de vue."</dial2>
+			</negative_answer>
+		</first_choice>
+		<second_choice>
+			<positive>Et alors ?</positive>
+			<negative>Je vois.</negative>
+			<positive_answer>
+				<dial1>Appoline : "Ce n’est pas une raison de se radicaliser ou de s’en prendre à des innocents ! Si je prends mon cas, j’essaye de sermonner les gens pour les faire réfléchir, ça peut paraitre violent, mais je n’ai jamais été insultant ou agressif. Quand ça arrive en public, la personne qui m’agresse se sent bête, tout le monde le regarde de travers."</dial1>
+				<dial2>Nassim : "Mais…"</dial2>
+				<dial3>Appoline : "Rentre avec moi, tout se passera bien."</dial3>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Appoline : "Je pense que j’aurais pu faire ça si je n’avais pas un caractère de cochon."</dial1>
+				<dial2>Nassim : "Je vais continuer si tu le permets."</dial2>
+				<dial3>Appoline : "Attend, rentre avec moi ! Je suis sûr qu’il y a une autre solution !"</dial3>
+			</negative_answer>
+		</second_choice>
+	</fin_appoline>
+
+	<fin_nassim>
+		<dial1>Nassim : Appoline !!</dial1>
+		<dial2>Appoline : Oh ! C’est toi. Tu es venu assister à mon œuvre ?</dial2>
+		<first_choice>
+			<positive>Je veux comprendre ce qui se passe.</positive>
+			<negative>Ton œuvre ?</negative>
+			<positive_answer>
+				<dial1>Nassim : Je veux comprendre ce qui se passe, ce que tu fais ici, pourquoi tu en es arrivé là. Parle-moi !</dial1>
+				<dial2>Appoline : Tu veux comprendre, c’est très simple ! Je ne peux plus supporter cette discrimination parce que je suis différente physiquement et culturellement, alors que j’ai grandi dans cette ville comme tout le monde ! Je crois que tu peux comprendre ça. Un jour, j’ai rencontré un groupe qui avait les mêmes objectifs que moi et j’ai pu m’améliorer.</dial2>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Nassim : Comment ça ? Qu’est-ce que fabrique et pourquoi ?</dial1>
+				<dial2>Appoline : Oui mon œuvre. Mais tu n’as pas l’air de comprendre, je vais t’expliquer. Je ne peux plus supporter cette discrimination parce que je suis différente physiquement et culturellement, alors que j’ai grandi dans cette ville comme tout le monde ! Je crois que tu peux comprendre ça. Un jour, j’ai rencontré un groupe qui avait les mêmes objectifs que moi et j’ai pu m’améliorer.</dial2>
+			</negative_answer>
+		</first_choice>
+		<second_choice>
+			<positive>Je ne crois pas.</positive>
+			<negative>Je comprends.</negative>
+			<positive_answer>
+				<dial1>Nassim : Je ne crois pas qu’on puisse s’améliorer en faisant du mal d’autre personne. Tu vas faire quelque de terrible et avec de lourde conséquence pour les personnes comme toi et moi !</dial1>
+				<dial2>Appoline : Je n’avais pas vu les choses comme ça...</dial2>
+				<dial3>Nassim : Alors viens, il n’est pas trop tard.</dial3>
+			</positive_answer>
+			<negative_answer>
+				<dial1>Nassim : Je me mets à ta place et je pense que j’aurais pu faire ça, si j’étais dans la même situation.</dial1>
+				<dial2>Appoline : C’est bien beau mais moi j’ai des choses à faire.</dial2>
+				<dial3>Nassim : Attends, rentre avec moi, il y a d’autre solution.</dial3>
+			</negative_answer>
+		</second_choice>
+	</fin_nassim>
+
+	<!--
+    <Data1>
+        <Alex>Alex: "Apo' ? Tu fais quoi là ?"</Alex>
+        <Appoline>Appoline: "Alex ? T'arrêtes ça direct !"</Appoline>
+        <Mai>Maï: "...Nassim ?"</Mai>
+        <Nassim>Nassim: "Maï ? Qu'est-ce qui se passe ?"</Nassim>
+    </Data1>
+	
+    <Data2>
+		<Alex>Appoline: "Pose pas de question débile, tu vois bien ce que je fais."</Alex>
+        <Appoline>Alex: "Tu te prends pour qui pour me parler comme ça ? T'as pas à me dire ce que je dois faire."</Appoline>
+        <Mai>Nassim: "Qu'est-ce que tu fais ici ?"</Mai>
+        <Nassim>Maï: "Laisse moi, tu n'as rien à faire ici."</Nassim>
+	</Data2>
+	
+    <Data3>
+		<Alex>Alex: "C'est toi qui est en train de faire un truc stupide, tu t'en rends compte ?"</Alex>
+        <Appoline>Appoline: "Sauf que là tu fais n'importe quoi, je vais pas te laisser faire sans rien dire."</Appoline>
+        <Mai>Maï: "On s'inquiètait pour toi. Ça va ?"</Mai>
+        <Nassim>Nassim: "J'ai toutes les raisons d'être là ! Mais j'espérais que ta mère se trompait, je pensais que tu ne pourrais jamais..."</Nassim>
+	</Data3>
+
+    <Data4>
+		<Alex>Appoline: "Comme si tu pouvais comprendre, me fais pas rire !"</Alex>
+        <Appoline>Alex: "Tu vas encore la ramener et faire celle qui sait tout ? Tu comptes me montrer à quel point tu es plus intelligente ?"</Appoline>
+        <Mai>Nassim: "C'était pas la peine de s'inquiéter, je sais très bien ce que je fais."</Mai>
+        <Nassim>Maï: "Jamais quoi ? Qu'est-ce que tu sais vraiment de moi en fait ?"</Nassim>
+	</Data4>
+		<Data5>
+			<Alex>Appoline: "En quoi ce serait "stupide", tu m'expliques ?"</Alex>
+			<Appoline>Alex: "Et pourquoi j'en aurais quelque chose à faire de ce que tu as à dire ?"</Appoline>
+			<Mai>Nassim: "Ça peut aller..."</Mai>
+			<Nassim>Maï: "…"</Nassim>
+		</Data5>
+			<Data6>
+				<Alex>Appoline: "Tu comptes me faire la morale, t'es juste venue pour ça ?"</Alex>
+				<Appoline>Alex: "Tu penses que tu vas changer quelque chose ? Tu ne peux plus, c'est trop tard."</Appoline>
+				<Mai>Nassim: "Oui, ça va. Pourquoi ?"</Mai>
+				<Nassim>Maï: "Ça sert à rien d'insister Nass'."</Nassim>
+			</Data6>
+    
+    <Data7>
+		<Alex>Alex: "C'est vrai que parfois j'ai du mal à comprendre comment tu fonctionnes, mais j'essaye, dis pas le contraire."</Alex>
+        <Appoline>Appoline: "Je suis là pour aider mon amie, pas pour me mettre en avant, c'est ta mère qui me l'a demandé."</Appoline>
+        <Mai>Maï: "C'est pas l'impression que tu donnes."</Mai>
+        <Nassim>Nassim: "J'en sais assez pour être sûr que ça ne te ressemble pas de faire ça, me dis pas le contraire."</Nassim>
+	</Data7>
+		<Data8>
+			<Alex>Alex: "Fais pas genre, t'es plus intelligente que ça, tu sais très bien comment ça va finir."</Alex>
+			<Appoline>Appoline: "Parce que je suis ton amie, à moins que ça ait changé, mais ça j'en doute."</Appoline>
+			<Mai>Maï: "Nassim, je sais quand tu vas pas bien... T'as pas besoin de faire semblant."</Mai>
+			<Nassim>Nassim: "Dis quelque chose, tu peux pas me laisser comme ça, sans explication…"</Nassim>
+		</Data8>
+			<Data9>
+				<Alex>Alex: "Arrête de dire n'importe quoi, tu sais que si je suis là c'est parce que je m'inquiète !"</Alex>
+				<Appoline>Appoline: "Tant que c'est pas fini, c'est pas trop tard, tu peux encore renoncer."</Appoline>
+				<Mai>Maï: "Ben je ne sais pas. Personne ne t'as vu de la journée et je te trouve tout seul dans une tour abandonnée..."</Mai>
+				<Nassim>Nassim: "Tu penses vraiment que je vais partir et te laisser là ?"</Nassim>
+			</Data9>
+
+    <Data10>
+		<Alex>Alex: "Je te connais, si tu fais ça c'est que tu dois être en colère. Tu t'es encore laissée emporter, pas vrai ?"</Alex>
+        <Appoline>Appoline: "Je peux pas t'aider si tu m'expliques pas ce qui se passe, tu es du genre engagée, mais pas à ce point."</Appoline>
+        <Mai>Maï: "Ça se passe bien avec l'association ?"</Mai>
+        <Nassim>Nassim: "Ça fait plusieurs semaines que tu ne me parles plus vraiment. Il s'est passé quelque chose ?"</Nassim>
+	</Data10>
+
+    <Data11>
+		<Alex>Appoline: "Au début c'était de la colère, mais j'ai dépassé ce stade depuis longtemps."</Alex>
+        <Appoline>Alex: "Au bout d'un moment, l'engagement ne sert à rien si tu n'agis pas."</Appoline>
+        <Mai>Nassim: "Ouais. On a parfois des gens qui refusent d'être aidés, mais au moins on sait qu'on a essayé."</Mai>
+        <Nassim>Maï: "Rien de spécial, je me suis juste fait de nouveaux amis."</Nassim>
+	</Data11>
+		<Data12>
+			<Alex>Appoline: "Et alors ? Tu penses que j'ai pas raison d'être en colère ? Ils meritent ce qui va arriver, c'est de leur faute !"</Alex>
+			<Appoline>Alex: "C'est pas juste de l'engagement, j'ai trouvé une cause à défendre, une façon de me rendre vraiment utile."</Appoline>
+			<Mai>Nassim: "C'est toujours les mêmes qui essayent d'aider et les autres s'en fichent. Ça me fatigue."</Mai>
+			<Nassim>Maï: "J'ai pas trop envie d'en parler…"</Nassim>
+		</Data12>
+			<Data13>
+				<Alex>Appoline: "Si seulement je ressentais seulement de la colère, ça serait tellement plus simple…"</Alex>
+				<Appoline>Alex: "Tu crois que tout ça c'est juste de la politique ?"</Appoline>
+				<Mai>Nassim: "On manque de bénévoles, mais on s'en sort quand même. Comme d'habitude."</Mai>
+				<Nassim>Maï: "J'ai toujours le nez dans mes photos, que veux-tu qu'il puisse m'arriver ?"</Nassim>
+			</Data13>
+
+    <Data14>
+		<Alex>Alex: "Et tu aurais pas pu m'en parler avant qu'on en arrive là ?"</Alex>
+        <Appoline>Appoline: "Mais à quoi ça sert d'agir si c'est seule dans son coin, sans consulter les autres pour avoir leurs avis ?"</Appoline>
+        <Mai>Maï: "Tu as déjà aidé plein de monde, c'est le plus important."</Mai>
+        <Nassim>Nassim: "C'est cool ça ! Toi qui manquais de modèles pour tes photos, ça tombe plutôt bien."</Nassim>
+	</Data14>
+		<Data15>
+			<Alex>Alex: "Quoi ? Tout ça parce qu'on a mis le feu à ton magasin préféré ? T'abuses un peu tu crois pas ?"</Alex>
+			<Appoline>Appoline: "Parce que ton documentaire était pas suffisant pour faire avancer les choses ? T'as changé d'avis ?"</Appoline>
+			<Mai>Maï: "Peut-être qu'ils ne s'en fichent pas tous, mais qu'ils ne savent pas comment aider ?"</Mai>
+			<Nassim>Nassim: "Les filles de ta classe t'ont encore posé des problèmes, c'est ça ?"</Nassim>
+		</Data15>
+			<Data16>
+				<Alex>Alex: "Ça va mal à ce point ? J'ai rien vu arriver, tu n'as rien montré. Ça fait longtemps ?"</Alex>
+				<Appoline>Appoline: "Quand on essaye de changer la société, on fait forcément de la politique, t'as pas trop le choix."</Appoline>
+				<Mai>Maï: "Vous faites déjà beaucoup pour une petite équipe."</Mai>
+				<Nassim>Nassim: "Justement, tes photos sont plus "sombres" ces derniers temps, ça doit bien vouloir dire quelque chose."</Nassim>
+			</Data16>
+
+    <Data17>
+		<Alex>M. Lafitte: "Demander de l'aide lui aurait demandé un gros effort, tu sais qu'elle est plutôt fière."</Alex>
+        <Appoline>M. Lafitte: "Appoline a raison, agir est important, mais pour que le mouvement ait de l'impact, il faut se regrouper."</Appoline>
+        <Mai>M. Lafitte: "Et puis tu sais, accepter d'avoir besoin d'aide demande parfois un gros travail sur soi."</Mai>
+        <Nassim>M. Lafitte: "Mais si tu en es là c'est que tout cet entourage n'a pas suffi, je me trompe ?"</Nassim>
+	</Data17>
+		<Data18>
+			<Alex>M. Lafitte: "J'ai du mal à croire qu'elle soit dans cet état pour quelque chose d'aussi futile."</Alex>
+			<Appoline>M. Lafitte: "Ce serait dommage, il a vraiment du potentiel ce film. Il ne faut pas lâcher un si beau projet Alex."</Appoline>
+			<Mai>M. Lafitte: "C'est justement parce qu'il y a des gens qui s'en fichent, que ce que vous faites est important."</Mai>
+			<Nassim>M. Lafitte: "C'est probable, mais elle n'a pas l'air de vouloir aborder le sujet, tu dois respecter ça Nassim."</Nassim>
+		</Data18>
+			<Data19>
+				<Alex>M. Lafitte: "Elle était venue m'en parler il y a quelques semaines, mais j'ignorais que c'était si grave..."</Alex>
+				<Appoline>M. Lafitte: "Normalement c'est positif de voir des jeunes s'engager et défendre des idées, mais là…"</Appoline>
+				<Mai>M. Lafitte: "Pense aussi à te ménager un peu, à force de toujours donner on oublie parfois de prendre du temps pour soi."</Mai>
+				<Nassim>M. Lafitte: "C'est certainement le signe que quelque chose ne va pas, bien vu Nassim !"</Nassim>
+			</Data19>
+
+    <Data20>
+		<Alex>Alex: "Y a surement une autre raison, non ? Je peux faire quelque chose peut-être…"</Alex>
+        <Appoline>Appoline: "J'ai l'impression que cette idée ne vient pas de toi, ça ne te ressemble pas trop."</Appoline>
+        <Mai>Maï: "T'aides toujours les autres, mais là c'est toi qui a l'air d'avoir besoin d'aide."</Mai>
+        <Nassim>Nassim: "Si tu es là, c'est qu'il y a bien une raison non ? Tu n'as même pas pris ton appareil, ça ne trompe pas."</Nassim>
+	</Data20>
+
+    <Data21>
+		<Alex>Appoline: "Tu ne peux rien faire. Le monde va retrouver son équilibre, comme le veut l'Iterationisme, c'est tout."</Alex>
+        <Appoline>Alex: "Je me suis ouverte aux principes de l'Iterationisme et je recherche maintenant un équilibre global, c'est tout."</Appoline>
+        <Mai>Nassim: "Tu sais, je suis pas si important. L'iterationisme dit que ce qui compte c'est que le monde retrouve son équilibre."</Mai>
+        <Nassim>Maï: "Mes motivations n'ont pas d'importance, ce qui compte c'est que notre monde retrouve son équilibre."</Nassim>
+	</Data21>
+		<Data22>
+			<Alex>Appoline: "Je n'ai besoin de personne, La Grande Eclypse m'a montré ce qui compte vraiment, je serai bientôt libre."</Alex>
+			<Appoline>Alex: "Et pourtant c'est bien moi, j'ai simplement trouver ma place dans La Grande Eclypse."</Appoline>
+			<Mai>Nassim: "J'ai pas besoin d'aide. Les principes de la Grande Eclypse m'ont donné un nouveau but."</Mai>
+			<Nassim>Maï: "Les plans de La Grande Eclypse se passent de photographies, tu le verras de tes propres yeux."</Nassim>
+		</Data22>
+			<Data23>
+				<Alex>Appoline: "Pourquoi il devrait y avoir une autre raison ? Ce que je ressens ne suffit pas ?"</Alex>
+				<Appoline>Alex: "Je serais si influençable que ça ? Tu me vois vraiment comme ça ?"</Appoline>
+				<Mai>Nassim: "Plus maintenant. Je dois finir ce que j'ai commencé."</Mai>
+				<Nassim>Maï: "Peu importe la raison, je dois finir ce que j'ai commencé."</Nassim>
+			</Data23>
+
+    <Data24>
+		<Alex>Alex: "Ta mère n'aimerais pas que tu utilises sa religion comme excuse pour justifier tes actes, c'est pas de la foi ça."</Alex>
+        <Appoline>Appoline: "Tu parles comme si on t'avait fait un lavage de cerveau, tu t'en rends compte ?"</Appoline>
+        <Mai>Maï: "La religion devrait aider les gens à se sentir bien. L'équilibre gobal dépend du bien-être de chacun."</Mai>
+        <Nassim>Nassim: "Si tu crois en l'Iterationisme à ce point, tu dois pouvoir expliquer ce qui te motive, pas agir aveuglément."</Nassim>
+	</Data24>
+		<Data25>
+			<Alex>Alex: "Libre ? T'as pas besoin de cette religion pour l'être, Apo', c'est pas comme ça que tu donneras un sens à ta vie."</Alex>
+			<Appoline>Appoline: "Tu ne devrais pas devoir renoncer à qui tu étais simplement pour être acceptée par une religion."</Appoline>
+			<Mai>Maï: "Comment ça un nouveau but ? Cette religion est devenue si importante pour toi ?"</Mai>
+			<Nassim>Nassim: "Je vais voir quoi ? Et depuis quand la religion a pris une telle place dans ta vie ? Ça n'a aucun sens !"</Nassim>
+		</Data25>
+			<Data26>
+				<Alex>Alex: "C'est pas ce que j'ai dit, excuse moi…"</Alex>
+				<Appoline>Appoline: "C'est juste que le changement est tellement brutal, j'essaye d'en comprendre la raison."</Appoline>
+				<Mai>Maï: "Non, t'es pas obligé. C'est pas grave de rebrousser chemin quand on est perdu."</Mai>
+				<Nassim>Nassim: "Tu n'es pas obligée d'en arriver là si tu n'en as plus envie, il n'est pas encore trop tard."</Nassim>
+			</Data26>
+	
+    <Data27>
+        <Alex>Alex: "Pourquoi t'en as pas au moins parlé à tes parents ? Ils s'inquiètent tellement…"</Alex>
+        <Appoline>Appoline: "J'ai du mal à croire que tu puisses tourner le dos à une communauté pour laquelle tu t'es tellement investie."</Appoline>
+        <Mai>Maï: "Nass' j'arrive pas à comprendre où tu veux en venir et ça m'inquiète. Tu veux pas en parler ?"</Mai>
+        <Nassim>Nassim: "J'ai l'impression que tu es perdue et qu'on doit vraiment parler toi et moi, il doit y avoir une solution."</Nassim>
+    </Data27>
+
+    <Data28>
+		<Alex>Appoline: "Ils s'inquiètent seulement de mes résultats et de ma réussite, ce que je ressens les intéresse pas."</Alex>
+        <Appoline>Alex: "Elles m'a apporté quoi cette communauté hein ? Ces gens pour lesquels je me fatigue, ils ont fait quelque chose ?"</Appoline>
+        <Mai>Nassim: "De toutes façons les gens ne comprendraient pas et ils n'écoutent jamais vraiment."</Mai>
+        <Nassim>Maï: "Tu crois vraiment que j'y ai pas déjà largement réfléchi par moi-même ?"</Nassim>
+	</Data28>
+		<Data29>
+			<Alex>Appoline: "Je peux pas en parler avec eux, ils seraient trop déçus."</Alex>
+			<Appoline>Alex: "J'avais surtout l'impression de n'avoir aucun impact, de m'agiter pour rien, sans vraiment être écoutée."</Appoline>
+			<Mai>Nassim: "J'ai pas envie d'embêter les gens avec mes problèmes. Il y en a qui vivent des choses bien pires."</Mai>
+			<Nassim>Maï: "Je vais pas encore t'embêter avec mes problèmes, tu dois en avoir assez à force."</Nassim>
+		</Data29>
+			<Data30>
+				<Alex>Appoline: "Non, pourquoi ?"</Alex>
+				<Appoline>Alex: "J'ai essayé de faire bouger les choses, mais ils ne veulent rien entendre, rien changer…"</Appoline>
+				<Mai>Nassim: "Je ne savais pas à qui me confier sans qu'on me juge ou qu'on me fasse des leçons de morale."</Mai>
+				<Nassim>Maï: "Je sais pas, j'avoue que j'ai du mal à m'y retrouver, tout est allé si vite…"</Nassim>
+			</Data30>
+
+    <Data31>
+		<Alex>Alex: "Dis pas n'importe quoi, c'est tes parents, ça peut pas les laisser indifférents."</Alex>
+        <Appoline>Appoline: "Ça prend du temps de changer la façon de penser des gens, il faut que tu sois patiente, ça viendra."</Appoline>
+        <Mai>Maï: "Moi je t'écoute jamais ? Je sers à quoi si quand t'as un problème tu ne viens pas me parler ?"</Mai>
+        <Nassim>Nassim: "C'est pas ce que j'ai dit. Mais c'est pas en gardant tout pour toi que ça va s'arranger, je peux aider."</Nassim>
+	</Data31>
+		<Data32>
+			<Alex>Alex: "Mais c'est normal que tu fasses des erreurs, ils doivent accepter que tu sois pas tout le temps parfaite."</Alex>
+			<Appoline>Appoline: "Dis pas n'importe quoi, t'as eu un impact positif sur pas mal de personnes."</Appoline>
+			<Mai>Maï: "Tu sais c'est le rôle des amis d'être là quand ça ne va pas et de se soutenir."</Mai>
+			<Nassim>Nassim: "Ne dis pas n'importe quoi, c'est ça aussi le rôle des amis."</Nassim>
+		</Data32>
+			<Data33>
+				<Alex>Alex: "Bah je sais pas, y a quelques années c'était toujours à ta mère que tu te confiais, tu pourrais encore le faire."</Alex>
+				<Appoline>Appoline: "Attends que ton documentaire sorte, ça pourrait changer les choses de façon radicale, j'en suis sure."</Appoline>
+				<Mai>Maï: "Tu m'as jamais jugée quand je te racontais mes problèmes, alors pourquoi moi je le ferais ?"</Mai>
+				<Nassim>Nassim: "Rien ne presse, calme toi, on peut prendre le temps d'en parler si ça peut t'aider."</Nassim>
+			</Data33>
+
+    <Data34>
+		<Alex>Mme Basri: "Si tu as besoin de parler, tu peux venir me voir, en tant qu'assistante sociale je ne suis pas là pour juger."</Alex>
+        <Appoline>Mme Basri: "Tu sais, je travaille dans le social, et parfois les gens refusent d'être aider, par peur le plus souvent."</Appoline>
+        <Mai>Mme Basri: "Ce n'est pas de ta faute Maï, même quand c'est ton travail d'aider les autres, ils refusent parfois de te parler."</Mai>
+        <Nassim>Mme Basri: "Ça peut aussi aider de se confier à quelqu'un d'extérieur, comme à une assistante sociale, je suis là pour ça."</Nassim>
+	</Data34>
+		<Data35>
+			<Alex>Mme Basri: "Surtout, tu dois confier tes problèmes à tes proches, ne garde pas tout pour toi."</Alex>
+			<Appoline>Mme Basri: "Et même si on a peu de retours, l'important c'est d'essayer, on aide forcément quelqu'un à un moment."</Appoline>
+			<Mai>Mme Basri: "C'est pas parce que tu penses que ton problème n'est pas important qu'il ne faut pas en parler."</Mai>
+			<Nassim>Mme Basri: "Chaque problème est important, il faut prendre le temps d'en parler Maï."</Nassim>
+		</Data35>
+			<Data36>
+				<Alex>Mme Basri: "Maintenant elle s'inquiète et ne sait pas ce qui t'arrive, c'est très dur pour un parent."</Alex>
+				<Appoline>Mme Basri: "Les gens ont leurs habitudes, pour qu'ils changent il faut un electrochoc, Appoline a raison."</Appoline>
+				<Mai>Mme Basri: "Il n'y a aucune honte à venir discuter avec une assistante sociale. Nous sommes là pour ça."</Mai>
+				<Nassim>Mme Basri: "Ça arrive de perdre pieds, on a tous traversé des moments comme ça."</Nassim>
+			</Data36>
+
+    <Data37>
+		<Alex>Alex: "Maintenant qu'on est là, parle moi, je suis là pour ça. Qu'est ce qui va pas ? T'as l'air perdue."</Alex>
+        <Appoline>Appoline: "On parle beaucoup des autres, mais toi, tu ressens quoi au fond ? Dis moi comment je peux t'aider."</Appoline>
+        <Mai>Maï: "Et puis si ça ne va pas bien, rester tout seul n'arrange rien."</Mai>
+        <Nassim>Nassim: "J'ai toujours aucune idée de ce qui t'as poussé à faire ça, tu crois pas que c'est le moment de m'expliquer ?"</Nassim>
+	</Data37>
+
+    <Data38>
+		<Alex>Appoline: "J'en ai marre de faire semblant, de faire comme si tout allait bien dans cette ville ou dans ma vie, j'en peux plus."</Alex>
+        <Appoline>Alex: "Comment tu pourrais comprendre ? Tu as ta petite vie parfaite, t'imagines même pas ce que je peux vivre…"</Appoline>
+        <Mai>Nassim: "Vous passez votre temps à sourire comme si tout allait bien. J'ai l'impression d'être le seul à voir ce qui ne va pas."</Mai>
+        <Nassim>Maï: "Tu vas me dire que pour toi tout va bien ? Que t'as aucune idée de ce que je peux ressentir ?"</Nassim>
+	</Data38>
+		<Data39>
+			<Alex>Appoline: "Ce qui va pas ? Faudrait me demander ce qui va plutôt, tu crois pas ?"</Alex>
+			<Appoline>Alex: "Je m'inquiète surtout pour ma mère, je sais qu'elle ne va pas bien. J'aimerais tellement arranger les choses…"</Appoline>
+			<Mai>Nassim: "Que je reste seul ou que je sois entouré, de toute façon tout le monde va mal en ce moment..."</Mai>
+			<Nassim>Maï: "Tu crois que je suis aveugle ? Je vois bien que toi aussi tu vas mal ces derniers temps, arrête de faire semblant."</Nassim>
+		</Data39>
+			<Data40>
+				<Alex>Appoline: "Tu pourrais pas comprendre."</Alex>
+				<Appoline>Alex: "Je suis surtout fatiguée de tout ça, j'ai hâte qu'on en finisse."</Appoline>
+				<Mai>Nassim: "Je suis pas sûr que tu puisses comprendre ce que je ressens vraiment."</Mai>
+				<Nassim>Maï: "Je crois pas que tu pourrais comprendre…"</Nassim>
+			</Data40>
+
+    <Data41>
+		<Alex>Alex: "Mais t'as pas à jouer un rôle, dis le quand ça va pas, c'est pas grave d'être triste ou d'avoir peur."</Alex>
+        <Appoline>Appoline: "On a pas la même vie mais ça veut pas dire que la mienne est parfaite, loin de là même."</Appoline>
+        <Mai>Maï: "T'inquiète, là je vois bien ce qui ne va pas et j'ai plus du tout envie de sourire."</Mai>
+        <Nassim>Nassim: "Je peux seulement imaginer. Mais la différence c'est que moi j'essaye de rester positif."</Nassim>
+	</Data41>
+		<Data42>
+			<Alex>Alex: "Tout ne va pas si mal, tu le sais, y a toujours au moins un peu de positif auquel se raccrocher."</Alex>
+			<Appoline>Appoline: "Elle a surtout besoin que tu sois là, ça lui ferait tellement de mal que tu finisses par t'attirer des ennuis."</Appoline>
+			<Mai>Maï: "Du coup c'est une raison pour baisser les bras ? Toi, tu comptes abandonner comme ça ?"</Mai>
+			<Nassim>Nassim: "J'essaye de mettre ça de côté, parce qu'il y a plus important pour l'instant : essayer de t'aider."</Nassim>
+		</Data42>
+			<Data43>
+				<Alex>Alex: "On est presque comme des sœurs, bien entendu que je peux comprendre, dis pas ça !"</Alex>
+				<Appoline>Appoline: "On est pas obligé d'aller plus loin, on peut juste tout arrêter, ça ne tient qu'à toi Alex."</Appoline>
+				<Mai>Maï: "Si tu crois que je vais bien, tu te trompes. Mais ensemble on pourrait faire que ça aille mieux."</Mai>
+				<Nassim>Nassim: "C'est pas en me mettant à l'écart que je vais comprendre hein."</Nassim>
+			</Data43>
+
+    <Data44>
+		<Alex>M. Felch: "Tu passes ton temps à rester fière et forte, ça doit être épuisant à force, laisse toi aller de temps en temps."</Alex>
+        <Appoline>M. Felch: "Appoline a aussi des problèmes, le plus souvent elle les garde pour elle, mais tout n'est pas si rose."</Appoline>
+        <Mai>M. Felch: "D'habitude c'est toi qui essayes de rendre les gens heureux, qu'est-ce qui a changé ?"</Mai>
+        <Nassim>M. Felch: "D'habitude tu sais exprimer tes sentiments, qu'est-ce qui t'empêche de le faire cette fois ?"</Nassim>
+	</Data44>
+		<Data45>
+			<Alex>M. Felch: "Alex, parfois c'est dur de voir le positif quand on est submmergé par ses émotions."</Alex>
+			<Appoline>M. Felch: "C'est normal de t'inquiéter pour elle, mais tu dois aussi lui parler, elle est capable d'entendre ce que tu ressens."</Appoline>
+			<Mai>M. Felch: "C'est vrai ça Nassim, ça ne te ressemble pas."</Mai>
+			<Nassim>M. Felch: "C'est seulement en vous entraidant que vous arriverez à surmonter vos problèmes respectifs."</Nassim>
+		</Data45>
+			<Data46>
+				<Alex>M. Felch: "Vous n'avez pas eu la même vie, c'est peu mais cette différence empêche parfois de vraiment comprendre."</Alex>
+				<Appoline>M. Felch: "Tu as la chance d'avoir une amie qui te tend la main, ne laisse pas passer cette chance, c'est tellement rare."</Appoline>
+				<Mai>M. Felch: "C'est normal à votre âge d'avoir des moments de doute. C'est en les surmontant qu'on grandit."</Mai>
+				<Nassim>M. Felch: "Allons, vous vous connaissez depuis des années, vous valez mieux que ça."</Nassim>
+			</Data46>
+
+    <Data47>
+		<Alex>Alex: "Y a plein de gens qui vont mal, ils ne sont pas là aujourd'hui, alors dis moi ce qui te pousse à faire ça."</Alex>
+        <Appoline>Appoline: "Tu vois bien que tu n'es pas seule, on est là. Tu penses que ça suffirait pour te faire renoncer à ton plan ?"</Appoline>
+        <Mai>Maï: "Il a dû se passer un truc grave pour que tu en arrives là. J'aimerais t'aider, mais je ne sais pas comment faire."</Mai>
+        <Nassim>Nassim: "Ça commence à me rendre fou cette histoire, tu te rends compte de ce que tu fais au moins ?"</Nassim>
+	</Data47>
+
+
+    <Data48>
+		<Alex>Appoline: "J'ai juste envie de régler les problèmes que l'Etat n'a pas su gérer malgré tous ses efforts, voilà ce qui me motive."</Alex>
+        <Appoline>Alex: "Peut-être, mais j'ai encore l'impression de devoir agir pour compenser ce que l'Etat ne fait pas."</Appoline>
+        <Mai>Nassim: "Toute seule tu ne peux rien faire. Nous on va résoudre les problèmes que l'Etat a vaguement essayé de régler."</Mai>
+        <Nassim>Maï: "Je vais résoudre les problèmes que l'Etat a vaguement essayé de régler, voilà ce que je fais."</Nassim>
+	</Data48>
+		<Data49>
+			<Alex>Appoline: "Ce qui me pousse à faire ça c'est l'inactivité du Gouverneur, il laisse les choses se dégrader !"</Alex>
+			<Appoline>Alex: "Je sais pas, il faut quand même que quelqu'un fasse ce que le Gouverneur refuse de faire."</Appoline>
+			<Mai>Nassim: "C'est le Gouverneur qui aurait dû aider les citoyens avant qu'ils aient à le faire eux-mêmes."</Mai>
+			<Nassim>Maï: "Vas dire ça au Gouverneur, comme si lui savait ce qu'il fait, c'est sa faute si on en est là !"</Nassim>
+		</Data49>
+			<Data50>
+				<Alex>Appoline: "Je peux te montrer ce qui me pousse à faire tout ça, il suffirait que tu t'ouvres un peu à de nouvelles idées…"</Alex>
+				<Appoline>Alex: "Tu sais, on m'a dit pourquoi je devais faire ça, j'ai de bonnes raisons…"</Appoline>
+				<Mai>Nassim: "Si t'as envie d'aider, viens avec moi. Je connais des gens qui t'expliqueront quoi faire."</Mai>
+				<Nassim>Maï: "Je pourrais te présenter des personnes qui pourraient t'expliquer, tu comprendrais ce que…"</Nassim>
+			</Data50>
+
+    <Data51>
+		<Alex>Alex: "Et c'est ça ta solution miracle ?  Tu t'es pas dit que tu pouvais régler les problèmes autrement ?"</Alex>
+        <Appoline>Appoline: "Tu pourras encore agir dans ce sens, mais pas comme ça, pas toute seule."</Appoline>
+        <Mai>Maï: "Tu vas surtout créer plus de problèmes que tu ne vas en résoudre avec cette mentalité."</Mai>
+        <Nassim>Nassim: "Parce que la politique t'intéresse maintenant ? T'as changé très vite on dirait."</Nassim>
+	</Data51>
+		<Data52>
+			<Alex>Alex: "Tu crois qu'il peut tout régler si facilement ? Pourquoi t'as pas essayé d'aider plutôt que de critiquer ?"</Alex>
+			<Appoline>Appoline: "Et pourquoi ce serait à toi de le faire ? Seule en plus ? Tu pourrais prendre le temps d'organiser un mouvement."</Appoline>
+			<Mai>Maï: "Il ne peut pas tout faire, c'est pour ça que les associations dont tu fais partie sont importantes."</Mai>
+			<Nassim>Nassim: "Tu ne peux pas blamer une seule personne pour ce qu'il se passe de négatif dans ta vie."</Nassim>
+		</Data52>
+			<Data53>
+				<Alex>Alex: "J'en veux pas de tes nouvelles idées, elles te mènent droit dans le mur, faut te réveiller !"</Alex>
+				<Appoline>Appoline: "Non, ceux qui t'ont poussé à faire ça ont des raisons de le faire, toi tu n'es pas comme ça, je le sais."</Appoline>
+				<Mai>Maï: "Je refuse d'obéir à des gens que je ne connais pas et abandonner mes principes !"</Mai>
+				<Nassim>Nassim: "Mais je veux pas qu'on m'explique ou je sais pas quoi ! C'est à toi que je parle là."</Nassim>
+			</Data53>
+
+    <Data54>
+		<Alex>Chef Maleh: "Les citoyens peuvent s'engager, agir et lancer des débats. Ce que tu fais là n'aidera probablement pas."</Alex>
+        <Appoline>Chef Maleh: "En patientant un peu vous verrez que l'Etat fait son possible mais que ça prend du temps."</Appoline>
+        <Mai>Chef Maleh: "Tous les problèmes ne se règlent pas en un jour. On fait déjà notre maximum pour que tout aille au mieux."</Mai>
+        <Nassim>Chef Maleh: "On fait déjà notre maximum pour que tout aille au mieux. Là vous risquez surtout d'aggraver les choses."</Nassim>
+	</Data54>
+		<Data55>
+			<Alex>Chef Maleh: "Le Gouverneur est toujours ouvert au dialogue mais si personne ne propose d'idée…"</Alex>
+			<Appoline>Chef Maleh: "Surtout que le Gouverneur est ouvert au dialogue, tu devrais lui faire part de tes idées."</Appoline>
+			<Mai>Chef Maleh: "Tu en as parlé au Gouverneur ? Tout devrait pouvoir se régler par le dialogue."</Mai>
+			<Nassim>Chef Maleh: "Et si tu en parlais au Gouverneur ? Je pense qu'il écouterait tes propositions avec attention."</Nassim>
+		</Data55>
+			<Data56>
+				<Alex>Chef Maleh: "Ces idées semblent dangereuses, pour toi, tes proches et les habitants de la ville…"</Alex>
+				<Appoline>Chef Maleh: "D'ailleurs, qui sont ces personnes ? On doit éviter qu'ils fassent encore plus de mal."</Appoline>
+				<Mai>Chef Maleh: "Est-ce que tu es sûr que ce qu'ils te demandent de faire est dans ton intérêt ? Tu les connais à peine..."</Mai>
+				<Nassim>Chef Maleh: "Qui sont ces personnes ? Si elles t'ont poussé à faire ça, j'ai à leurs parler."</Nassim>
+			</Data56>
+
+    <Data57>
+		<Alex>Alex: "T'es tellement plus intelligente que ça, je sais que tu as pensé aux conséquences, tu peux pas faire ça."</Alex>
+        <Appoline>Appoline: "Et ton documentaire, du coup, tu voudrais le reprendre ?"</Appoline>
+        <Mai>Maï: "Tu as pensé aux conséquences ? C'est pas le genre de décision qu'on prend sur un coup de tête."</Mai>
+        <Nassim>Nassim: "J'ai l'impression de parler à un mur, alors que la Maï que je connais m'aurait au moins laissé une chance…"</Nassim>
+	</Data57>
+	
+    <Data58>
+		<Alex>Appoline: "Ça te semble aussi délirant que ça ?"</Alex>
+        <Appoline>Alex: "Après ça, comment je pourrais encore être crédible ?"</Appoline>
+        <Mai>Nassim: "C'est bien beau mais tu proposes quoi ?"</Mai>
+        <Nassim>Maï: "Tu penses vraiment qu'on pourrait faire autrement ?"</Nassim>
+	</Data58>
+		<Data59>
+			<Alex>Appoline: "Ce sera un mal pour un bien. Enfin, je crois…"</Alex>
+			<Appoline>Alex: "Je sais pas si ça aurait encore du sens de le faire…"</Appoline>
+			<Mai>Nassim: "De quelles conséquences tu parles ?"</Mai>
+			<Nassim>Maï: "Une chance ? Pour que tu essayes de me faire revenir dans le droit chemin ? Pff…"</Nassim>
+		</Data59>
+			<Data60>
+				<Alex>Appoline: "J'y ai pensé, oui, mais pourquoi j'en auraits quelque chose à faire ?"</Alex>
+				<Appoline>Alex: "J'ai d'autres idées qui pourraient être plus efficaces, il faut que j'y réfléchisse."</Appoline>
+				<Mai>Nassim: "Bah j'y ai quand même réfléchi un peu..."</Mai>
+				<Nassim>Maï: "Et qu'est ce que tu en ferais de cette "chance" ?"</Nassim>
+			</Data60>
+
+    <Data61>
+		<Alex>Alex: "Oui, ça te ressemble pas, normalement tu te creuses toujours la tête pour trouver la meilleure solution."</Alex>
+        <Appoline>Appoline: "Au contraire, ton expérience va beaucoup apporter à ton film, il faut en parler, c'est important."</Appoline>
+        <Mai>Maï: "Qu'on réfléchisse à ce qu'on pourrait faire, ensemble. On va forcément trouver une meilleure solution."</Mai>
+        <Nassim>Nassim: "Oui, faudrait juste que tu me laisses un peu de temps et je suis sûr qu'on pourrait arranger ça."</Nassim>
+	</Data61>
+		<Data62>
+			<Alex>Alex: "Le mal que tu vas causer sera bien plus grave que le peu de bien que tu pourrais faire."</Alex>
+			<Appoline>Appoline: "Tu voulais le faire pour changer les choses et partager des idées, ça aura toujours de sens de faire ça."</Appoline>
+			<Mai>Maï: "Tu te rends compte que tu prends une décision sans réfléchir à l'impact que ça aura ? T'es sérieux ?"</Mai>
+			<Nassim>Nassim: "Exactement, on a toujours besoin de personnes qui veulent changer les choses dans mon association !"</Nassim>
+		</Data62>
+			<Data63>
+				<Alex>Alex: "Parce que tu fais partie de cette ville, les problèmes on les règles ensemble, pas seul !"</Alex>
+				<Appoline>Appoline: "Voilà ! Ça c'est la Alex que je connais, celle qui a toujours des projets en stock."</Appoline>
+				<Mai>Maï: "Si tu savais que ta décision était la bonne, tu nous l'aurais pas cachée. Tu crois pas ?"</Mai>
+				<Nassim>Nassim: "J'essayerais de te montrer qu'on peut changer les choses sans être extrême."</Nassim>
+			</Data63>
+
+    <Data64>
+		<Alex>Alex: "Tu voudrais pas qu'on sorte et qu'on en parle, pour voir ce qu'on pourrait faire ? Si on peut pas trouver mieux ?"</Alex>
+        <Appoline>Appoline: "Tu veux bien qu'on continue cette discussion ailleurs, histoire de se changer les idées ?"</Appoline>
+        <Mai>Maï: "Tu penses pas que maintenant ce serait le moment qu'on aille en parler un peu tous les deux ?"</Mai>
+        <Nassim>Nassim: "T'en dis quoi ? Tu veux qu'on essaye ma méthode ?"</Nassim>
+	</Data64>
+	
+    <Data65>
+		<Alex>Appoline: "T'as peut-être raison, ça serait intéressant d'avoir ton avis sur la question, j'ai besoin d'y réfléchir encore je crois."</Alex>
+        <Appoline>Alex: "Oui, je crois que j'ai besoin de souffler un peu. Tu viens à la maison avec moi ?"</Appoline>
+        <Mai>Nassim: "Ouais t'as raison. Je crois que j'ai besoin de prendre un peu de recul."</Mai>
+        <Nassim>Maï: "Je sais pas trop, explique moi d'abord ce que tu comptes faire, on verra après."</Nassim>
+	</Data65>
+
+	-->
+    
+</Dialogue>
